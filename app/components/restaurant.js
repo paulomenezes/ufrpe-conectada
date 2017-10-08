@@ -73,7 +73,7 @@ export default class Restaurant extends Component {
 
   render() {
     return (
-      <View style={styles.content}>
+      <View>
         {this.state.restaurant ? (
           <Blue
             title={this.state.title}

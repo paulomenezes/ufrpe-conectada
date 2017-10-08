@@ -1,4 +1,4 @@
-import { AVA_URL, CONSTS, headers } from '../contants';
+import { AVA_URL, FIREBASE_URL, CONSTS, headers } from '../contants';
 
 const login = (username, password) => {
   const formData = new FormData();
@@ -51,4 +51,16 @@ const getUsersCourses = (userId, token) => {
   }).then(response => response.json());
 };
 
-export { login, getSiteInfo, getUserById, getUsersCourses };
+const getSemester = () => {
+  return fetch(FIREBASE_URL + 'currentSemester.json').then(response => response.text());
+};
+
+const getSchedules = () => {
+  return fetch(FIREBASE_URL + 'schedules.json').then(response => response.json());
+};
+
+const getCalendar = () => {
+  return fetch(FIREBASE_URL + 'calendar.json').then(response => response.json());
+};
+
+export { login, getSiteInfo, getUserById, getUsersCourses, getSemester, getSchedules, getCalendar };

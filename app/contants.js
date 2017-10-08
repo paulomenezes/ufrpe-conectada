@@ -26,6 +26,7 @@ export const meals = {
 };
 
 export const AVA_URL = 'http://ava.ufrpe.br';
+export const FIREBASE_URL = 'https://ufrpe-5033f.firebaseio.com/';
 export const CONSTS = {
   URL_COMPLEMENT: '/webservice/rest/server.php?moodlewsrestformat=json',
   LOGIN_SERVICE: 'moodle_mobile_app',

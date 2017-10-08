@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Alert,
   AsyncStorage,
-  ActivityIndicator
+  KeyboardAvoidingView
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
@@ -14,9 +14,10 @@ import styles from '../styles';
 
 import Welcome from '../components/welcome';
 import Restaurant from '../components/restaurant';
+import DarkButton from '../components/darkButton';
 
 import { SEMESTER } from '../contants';
-import { login, getSiteInfo, getUsersCourses } from '../services/api';
+import { login, getSiteInfo, getUsersCourses, getSemester, getSchedules } from '../services/api';
 import { getCamelSentence } from '../util/functions';
 
 class Login extends Component {
@@ -45,13 +46,28 @@ class Login extends Component {
         const user = await login(this.state.username, this.state.password);
         const siteInfo = await getSiteInfo(user.token);
         const usersCourses = await getUsersCourses(siteInfo.userid, user.token);
+        const currentSemester = await getSemester();
+        const schedules = await getSchedules();
+
+        const semester = currentSemester.substr(1, 6);
 
         const courses = [];
         usersCourses.forEach(course => {
-          if (course.shortname.indexOf(SEMESTER) >= 0) {
+          if (course.shortname.indexOf(semester) >= 0) {
             courses.push(course);
           }
         });
+
+        for (let i = 0; i < courses.length; i++) {
+          let course = courses[i];
+          for (let j = 0; j < schedules.length; j++) {
+            let schedule = schedules[j];
+            if (course.shortname.split('-')[1].indexOf(schedule.cod) >= 0) {
+              course.classes = schedule;
+              break;
+            }
+          }
+        }
 
         const name = siteInfo.fullname.split(' ');
 
@@ -82,12 +98,15 @@ class Login extends Component {
     } catch (error) {
       console.log(error);
       Alert.alert('Error', 'Não foi possível realizar login');
+      this.setState({
+        loading: false
+      });
     }
   }
 
   render() {
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView style={styles.container}>
         <View style={styles.dark}>
           <Text style={styles.darkMessage}>
             Você deve realizar o login com sua conta do AVA. Use seu usuário informado no seu Siga e
@@ -97,6 +116,9 @@ class Login extends Component {
         <View style={styles.form}>
           <Text style={styles.formLabel}>Usuário</Text>
           <TextInput
+            autoFocus
+            autoCorrect={false}
+            autoCapitalize="none"
             style={styles.formInput}
             keyboardType="email-address"
             onChangeText={username => this.setState({ username })}
@@ -111,17 +133,13 @@ class Login extends Component {
             value={this.state.password}
           />
 
-          <ActivityIndicator animating={this.state.loading} />
-
-          <TouchableOpacity
-            style={[styles.darkButton, styles.formButon]}
+          <DarkButton
             onPress={this.onPress.bind(this)}
             disabled={this.state.loading}
-          >
-            <Text style={styles.darkButtonText}>Entrar</Text>
-          </TouchableOpacity>
+            title="Entrar"
+          />
         </View>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

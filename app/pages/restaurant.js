@@ -68,29 +68,27 @@ export default class Restaurant extends Component {
             )}
           </ScrollView>
         </Blue>
-        <View style={{ marginTop: 16 }}>
-          <Blue title="Jantar" description={this.state.description}>
-            <ScrollView horizontal>
-              {Object.keys(meals).map(
-                (key, index) =>
-                  this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][key] && (
-                    <View style={styles.white} key={index}>
-                      <Text style={styles.whiteTitle}>
-                        {this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
+        <Blue title="Jantar" description={this.state.description}>
+          <ScrollView horizontal>
+            {Object.keys(meals).map(
+              (key, index) =>
+                this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][key] && (
+                  <View style={styles.white} key={index}>
+                    <Text style={styles.whiteTitle}>
+                      {this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
+                        key
+                      ][0].substr(
+                        this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
                           key
-                        ][0].substr(
-                          this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
-                            key
-                          ][0].indexOf(':') + 2
-                        )}
-                      </Text>
-                      <Text style={styles.whiteDescription}>{meals[key]}</Text>
-                    </View>
-                  )
-              )}
-            </ScrollView>
-          </Blue>
-        </View>
+                        ][0].indexOf(':') + 2
+                      )}
+                    </Text>
+                    <Text style={styles.whiteDescription}>{meals[key]}</Text>
+                  </View>
+                )
+            )}
+          </ScrollView>
+        </Blue>
       </View>
     );
   }

@@ -6,6 +6,10 @@ export default {
   content: {
     margin: 16
   },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
   date: {
     fontSize: 20,
     color: '#FFF'
@@ -37,6 +41,7 @@ export default {
     color: '#FFF'
   },
   blue: {
+    marginTop: 16,
     backgroundColor: '#4d9ee9',
     borderRadius: 8,
     paddingVertical: 8
@@ -92,5 +97,41 @@ export default {
   },
   formButon: {
     alignSelf: 'flex-end'
+  },
+  yellow: {
+    flex: 1,
+    paddingVertical: 8,
+    marginRight: 8,
+    backgroundColor: '#FACE14',
+    borderRadius: 8,
+    justifyContent: 'space-between'
+  },
+  yellowTitle: {
+    marginHorizontal: 8,
+    fontSize: 25,
+    color: '#FFF'
+  },
+  yellowSubtitle: {
+    marginHorizontal: 8,
+    color: '#FFF',
+    marginBottom: 16
+  },
+  pink: {
+    flex: 1,
+    paddingVertical: 8,
+    marginLeft: 8,
+    backgroundColor: '#F21E60',
+    borderRadius: 8,
+    justifyContent: 'space-between'
+  },
+  pinkTitle: {
+    marginHorizontal: 8,
+    fontSize: 56,
+    color: '#FFF'
+  },
+  pinkSubtitle: {
+    marginHorizontal: 8,
+    color: '#FFF',
+    marginBottom: 16
   }
 };
