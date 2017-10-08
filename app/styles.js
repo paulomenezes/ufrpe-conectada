@@ -75,5 +75,22 @@ export default {
   },
   seeMoreText: {
     color: '#FFF'
+  },
+  form: {
+    margin: 16
+  },
+  formLabel: {
+    fontSize: 14,
+    color: '#FFF'
+  },
+  formInput: {
+    height: 40,
+    color: '#FFF',
+    marginBottom: 16,
+    borderBottomWidth: 2,
+    borderBottomColor: '#f21e60'
+  },
+  formButon: {
+    alignSelf: 'flex-end'
   }
 };

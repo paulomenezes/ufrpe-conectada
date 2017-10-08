@@ -1,17 +1,5 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  Text,
-  View,
-  TouchableOpacity,
-  ScrollView,
-  ActivityIndicator
-} from 'react-native';
-
-import iconv from 'iconv-lite';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import { parseString } from 'react-native-xml2js';
-import { Buffer } from 'buffer';
+import { View, AsyncStorage } from 'react-native';
 
 import styles from '../styles';
 
@@ -21,12 +9,28 @@ import Restaurant from '../components/restaurant';
 class Home extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      user: undefined
+    };
+  }
+
+  async componentWillMount() {
+    try {
+      const result = await AsyncStorage.getItem('user');
+
+      global.USER = JSON.parse(result);
+
+      this.setState({
+        user: global.USER
+      });
+    } catch (error) {}
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Welcome />
+        {!this.state.user && <Welcome navigation={this.props.navigation} />}
         <Restaurant navigation={this.props.navigation} />
       </View>
     );

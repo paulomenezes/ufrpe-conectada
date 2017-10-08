@@ -2,9 +2,11 @@ import React from 'react';
 import { AppRegistry } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
+import './util/reactotron.config';
 import styles from './styles';
 
 import Home from './pages/home';
+import Login from './pages/login';
 import Restaurant from './pages/restaurant';
 
 const Monday = props => <Restaurant navigation={props.navigation} dayOfWeek="segunda" />;
@@ -62,6 +64,7 @@ const RestaurantTab = TabNavigator(
 const UFRPE = StackNavigator(
   {
     Home: { screen: Home, navigationOptions: { title: 'UFRPE Conectada' } },
+    Login: { screen: Login, navigationOptions: { title: 'UFRPE Conectada' } },
     Restaurant: { screen: RestaurantTab, navigationOptions: { title: 'Cardápio' } }
   },
   {

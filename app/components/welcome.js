@@ -13,6 +13,10 @@ class Welcome extends Component {
     };
   }
 
+  onPress() {
+    this.props.navigation.navigate('Login');
+  }
+
   render() {
     return (
       <View>
@@ -27,7 +31,7 @@ class Welcome extends Component {
             Ao entrar com sua conta do AVA você tem acesso as suas aulas, exercícios, mensagens
             entre outros.
           </Text>
-          <TouchableOpacity style={styles.darkButton}>
+          <TouchableOpacity style={styles.darkButton} onPress={this.onPress.bind(this)}>
             <Text style={styles.darkButtonText}>Entrar</Text>
           </TouchableOpacity>
         </View>

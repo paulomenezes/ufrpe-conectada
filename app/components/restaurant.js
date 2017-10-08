@@ -80,7 +80,7 @@ export default class Restaurant extends Component {
             description={this.state.description}
             onMorePress={this.goRestaurant.bind(this)}
           >
-            <ScrollView horizontal pagingEnabled snapToInterval={200}>
+            <ScrollView horizontal>
               {Object.keys(meals).map(
                 (key, index) =>
                   this.state.restaurant[this.state.dayOfWeekString][0][this.state.meal][0][key] && (
