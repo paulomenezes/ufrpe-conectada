@@ -7,6 +7,11 @@ import styles from '../styles';
 import Welcome from '../components/welcome';
 import Restaurant from '../components/restaurant';
 
+import Yellow from '../containers/yellow';
+import Pink from '../containers/pink';
+
+import { getCamelSentence } from '../util/functions';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +19,7 @@ class Home extends Component {
     this.state = {
       user: undefined,
       today: [],
+      dayOfWeek: 0,
       date: new Date()
     };
   }
@@ -29,7 +35,7 @@ class Home extends Component {
         today = 1;
       }
 
-      console.log(global.USER);
+      let dayOfWeek = 0;
 
       const todayCourses = [];
       global.USER.courses.forEach(course => {
@@ -37,6 +43,7 @@ class Home extends Component {
           for (var i = 0; i < course.classes.schedules.length; i++) {
             var schedule = course.classes.schedules[i];
             if (schedule.dayOfWeek === today) {
+              dayOfWeek = i;
               todayCourses.push(course);
               break;
             }
@@ -48,11 +55,19 @@ class Home extends Component {
 
       this.setState({
         user: global.USER,
-        today: todayCourses
+        today: todayCourses,
+        dayOfWeek
       });
     } catch (error) {
       console.log(error);
     }
+  }
+
+  goToday() {
+    this.props.navigation.navigate('Course', {
+      course: this.state.today[0],
+      dayOfWeek: this.state.dayOfWeek
+    });
   }
 
   render() {
@@ -61,29 +76,29 @@ class Home extends Component {
         <View style={styles.content}>
           {!this.state.user && <Welcome navigation={this.props.navigation} />}
           {this.state.user && (
-            <View>
-              <View style={styles.row}>
-                <TouchableOpacity style={styles.yellow}>
-                  <Text style={styles.yellowTitle} numberOfLines={2}>
-                    {this.state.today[0].classes.name}
-                  </Text>
-                  <Text style={styles.yellowSubtitle}>Próxima aula</Text>
-                  <View style={styles.seeMore}>
-                    <Text style={styles.seeMoreText}>14:00 - 16:00</Text>
-                    <Icon name="keyboard-arrow-right" size={20} color="#FFF" />
-                  </View>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.pink}>
-                  <Text style={styles.pinkTitle}>{this.state.today.length}</Text>
-                  <Text style={styles.pinkSubtitle}>
-                    {this.state.date.getDay() === 0 ? 'Aulas amanhã' : 'Aulas hoje'}
-                  </Text>
-                  <View style={styles.seeMore}>
-                    <Text style={styles.seeMoreText}>Ver</Text>
-                    <Icon name="keyboard-arrow-right" size={20} color="#FFF" />
-                  </View>
-                </TouchableOpacity>
-              </View>
+            <View style={styles.row}>
+              <TouchableOpacity style={styles.yellowButton} onPress={this.goToday.bind(this)}>
+                <Yellow
+                  title={this.state.today[0].classes.name}
+                  description="Próxima aula"
+                  seeMore={
+                    this.state.today[0].classes.schedules[this.state.dayOfWeek].timeStart +
+                    ' - ' +
+                    this.state.today[0].classes.schedules[this.state.dayOfWeek].timeEnd
+                  }
+                />
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.pinkButton}>
+                <Pink
+                  title={this.state.today.length}
+                  description={
+                    this.state.today.length === 0
+                      ? 'Nenhuma aula' + (this.state.date.getDay() === 0 ? ' amanhã' : ' hoje')
+                      : (this.state.today.length === 1 ? 'Aula' : 'Aulas') +
+                        (this.state.date.getDay() === 0 ? ' amanhã' : ' hoje')
+                  }
+                />
+              </TouchableOpacity>
             </View>
           )}
           <Restaurant navigation={this.props.navigation} />

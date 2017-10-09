@@ -98,12 +98,14 @@ export default {
   formButon: {
     alignSelf: 'flex-end'
   },
-  yellow: {
+  yellowButton: {
     flex: 1,
+    marginRight: 8
+  },
+  yellow: {
     paddingVertical: 8,
-    marginRight: 8,
-    backgroundColor: '#FACE14',
     borderRadius: 8,
+    backgroundColor: '#FACE14',
     justifyContent: 'space-between'
   },
   yellowTitle: {
@@ -114,12 +116,15 @@ export default {
   yellowSubtitle: {
     marginHorizontal: 8,
     color: '#FFF',
+    marginTop: 7,
     marginBottom: 16
   },
-  pink: {
+  pinkButton: {
     flex: 1,
+    marginLeft: 8
+  },
+  pink: {
     paddingVertical: 8,
-    marginLeft: 8,
     backgroundColor: '#F21E60',
     borderRadius: 8,
     justifyContent: 'space-between'

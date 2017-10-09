@@ -8,6 +8,7 @@ import styles from './styles';
 import Home from './pages/home';
 import Login from './pages/login';
 import Restaurant from './pages/restaurant';
+import Course from './pages/course';
 
 const Monday = props => <Restaurant navigation={props.navigation} dayOfWeek="segunda" />;
 const Tuesday = props => <Restaurant navigation={props.navigation} dayOfWeek="terca" />;
@@ -65,7 +66,8 @@ const UFRPE = StackNavigator(
   {
     Home: { screen: Home, navigationOptions: { title: 'UFRPE Conectada' } },
     Login: { screen: Login, navigationOptions: { title: 'UFRPE Conectada' } },
-    Restaurant: { screen: RestaurantTab, navigationOptions: { title: 'Cardápio' } }
+    Restaurant: { screen: RestaurantTab, navigationOptions: { title: 'Cardápio' } },
+    Course: { screen: Course }
   },
   {
     cardStyle: styles.container,
