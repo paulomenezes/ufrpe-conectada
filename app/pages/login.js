@@ -77,7 +77,8 @@ class Login extends Component {
           firstname: getCamelSentence(name[0]),
           lastname: getCamelSentence(name[name.length - 1]),
           picture: siteInfo.userpictureurl,
-          courses: courses
+          courses: courses,
+          token: user.token
         };
 
         global.USER = userSave;

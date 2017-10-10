@@ -50,3 +50,7 @@ export const headers = {
 };
 
 export const SEMESTER = '2017.2';
+
+export const COLORS = {
+  blue: '#1B2D4F'
+};

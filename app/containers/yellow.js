@@ -11,10 +11,12 @@ const Yellow = props => (
       {getCamelSentence(props.title, true)}
     </Text>
     <Text style={styles.yellowSubtitle}>{props.description}</Text>
-    <View style={styles.seeMore}>
-      <Text style={styles.seeMoreText}>{props.seeMore}</Text>
-      <Icon name="keyboard-arrow-right" size={20} color="#FFF" />
-    </View>
+    {props.seeMore && (
+      <View style={styles.seeMore}>
+        <Text style={styles.seeMoreText}>{props.seeMore}</Text>
+        <Icon name="keyboard-arrow-right" size={20} color="#FFF" />
+      </View>
+    )}
   </View>
 );
 

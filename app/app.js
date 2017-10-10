@@ -4,6 +4,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
 
 import './util/reactotron.config';
 import styles from './styles';
+import { COLORS } from './contants';
 
 import Home from './pages/home';
 import Login from './pages/login';
@@ -72,8 +73,13 @@ const UFRPE = StackNavigator(
   {
     cardStyle: styles.container,
     navigationOptions: {
-      headerStyle: { backgroundColor: '#1B2D4F' },
-      headerTintColor: '#FFF'
+      headerStyle: [
+        {
+          backgroundColor: '#FFF'
+        },
+        styles.shadow
+      ],
+      headerTintColor: COLORS.blue
     }
   }
 );

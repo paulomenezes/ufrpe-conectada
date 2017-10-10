@@ -1,7 +1,18 @@
+import { COLORS } from './contants';
+
 export default {
   container: {
     flex: 1,
-    backgroundColor: '#1B2D4F'
+    backgroundColor: '#FBFBFB'
+  },
+  shadow: {
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 0
+    },
+    shadowRadius: 4,
+    shadowOpacity: 0.15
   },
   content: {
     margin: 16
@@ -16,17 +27,16 @@ export default {
   },
   dark: {
     alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#121f38'
+    padding: 16
   },
   darkTitle: {
     fontSize: 20,
-    color: '#FFF',
+    color: '#000',
     marginBottom: 8
   },
   darkMessage: {
     fontSize: 16,
-    color: '#FFF',
+    color: '#000',
     textAlign: 'center',
     marginBottom: 16
   },
@@ -41,56 +51,52 @@ export default {
     color: '#FFF'
   },
   blue: {
-    marginTop: 16,
-    backgroundColor: '#4d9ee9',
-    borderRadius: 8,
-    paddingVertical: 8
+    paddingTop: 16,
+    backgroundColor: '#FFF'
   },
   blueTitle: {
     fontSize: 26,
-    color: '#FFF',
-    marginHorizontal: 8
+    color: COLORS.blue,
+    marginHorizontal: 16
   },
   blueDescription: {
-    color: '#FFF',
-    marginHorizontal: 8,
-    marginBottom: 8
+    color: '#BBB',
+    marginBottom: 8,
+    marginHorizontal: 16
   },
   white: {
-    backgroundColor: '#FFF',
+    backgroundColor: '#F1F1F1',
     borderRadius: 8,
     padding: 8,
     width: 200,
-    marginLeft: 8,
-    marginRight: 8,
+    marginLeft: 16,
     justifyContent: 'space-between'
   },
   whiteTitle: {
-    color: '#346da3',
+    color: COLORS.blue,
     marginBottom: 8
   },
   whiteDescription: {
     color: '#8a8a8a'
   },
   seeMore: {
-    marginTop: 16,
-    marginHorizontal: 8,
+    margin: 16,
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
   seeMoreText: {
-    color: '#FFF'
+    color: COLORS.blue
   },
   form: {
     margin: 16
   },
   formLabel: {
     fontSize: 14,
-    color: '#FFF'
+    color: '#000'
   },
   formInput: {
     height: 40,
-    color: '#FFF',
+    color: '#000',
     marginBottom: 16,
     borderBottomWidth: 2,
     borderBottomColor: '#f21e60'
@@ -98,45 +104,33 @@ export default {
   formButon: {
     alignSelf: 'flex-end'
   },
-  yellowButton: {
-    flex: 1,
-    marginRight: 8
+  courseList: {
+    marginHorizontal: 16,
+    marginBottom: 16,
+    paddingLeft: 8,
+    borderLeftWidth: 5,
+    borderLeftColor: '#F21E60'
   },
-  yellow: {
-    paddingVertical: 8,
-    borderRadius: 8,
-    backgroundColor: '#FACE14',
-    justifyContent: 'space-between'
+  courseListTime: {
+    fontSize: 12,
+    color: '#BBB',
+    marginBottom: 8
   },
-  yellowTitle: {
-    marginHorizontal: 8,
-    fontSize: 25,
-    color: '#FFF'
+  courseListTitle: {
+    fontSize: 16,
+    color: '#000',
+    marginBottom: 8
   },
-  yellowSubtitle: {
-    marginHorizontal: 8,
-    color: '#FFF',
-    marginTop: 7,
-    marginBottom: 16
+  courseListPlace: {
+    fontSize: 14,
+    color: '#646464'
   },
-  pinkButton: {
-    flex: 1,
-    marginLeft: 8
+  page: {
+    marginTop: 16
   },
-  pink: {
-    paddingVertical: 8,
-    backgroundColor: '#F21E60',
-    borderRadius: 8,
-    justifyContent: 'space-between'
-  },
-  pinkTitle: {
-    marginHorizontal: 8,
-    fontSize: 56,
-    color: '#FFF'
-  },
-  pinkSubtitle: {
-    marginHorizontal: 8,
-    color: '#FFF',
-    marginBottom: 16
+  pageTitle: {
+    margin: 16,
+    fontSize: 18,
+    color: COLORS.blue
   }
 };

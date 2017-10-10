@@ -29,6 +29,7 @@ class Home extends Component {
       const result = await AsyncStorage.getItem('user');
 
       global.USER = JSON.parse(result);
+      console.log(global.USER);
 
       let today = this.state.date.getDay();
       if (today === 0 || today === 6) {
@@ -63,9 +64,9 @@ class Home extends Component {
     }
   }
 
-  goToday() {
+  goToday(course) {
     this.props.navigation.navigate('Course', {
-      course: this.state.today[0],
+      course: course,
       dayOfWeek: this.state.dayOfWeek
     });
   }
@@ -73,32 +74,26 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.content}>
+        <View>
           {!this.state.user && <Welcome navigation={this.props.navigation} />}
           {this.state.user && (
-            <View style={styles.row}>
-              <TouchableOpacity style={styles.yellowButton} onPress={this.goToday.bind(this)}>
-                <Yellow
-                  title={this.state.today[0].classes.name}
-                  description="Próxima aula"
-                  seeMore={
-                    this.state.today[0].classes.schedules[this.state.dayOfWeek].timeStart +
-                    ' - ' +
-                    this.state.today[0].classes.schedules[this.state.dayOfWeek].timeEnd
-                  }
-                />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.pinkButton}>
-                <Pink
-                  title={this.state.today.length}
-                  description={
-                    this.state.today.length === 0
-                      ? 'Nenhuma aula' + (this.state.date.getDay() === 0 ? ' amanhã' : ' hoje')
-                      : (this.state.today.length === 1 ? 'Aula' : 'Aulas') +
-                        (this.state.date.getDay() === 0 ? ' amanhã' : ' hoje')
-                  }
-                />
-              </TouchableOpacity>
+            <View>
+              <Text style={styles.pageTitle}>Terça, 10 de outubro</Text>
+              {this.state.today.map((today, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.courseList}
+                  onPress={this.goToday.bind(this, today)}
+                >
+                  <Text style={styles.courseListTime}>
+                    {today.classes.schedules[this.state.dayOfWeek].timeStart +
+                      ' - ' +
+                      today.classes.schedules[this.state.dayOfWeek].timeEnd}
+                  </Text>
+                  <Text style={styles.courseListTitle}>{today.classes.name}</Text>
+                  <Text style={styles.courseListPlace}>{today.classes.place}</Text>
+                </TouchableOpacity>
+              ))}
             </View>
           )}
           <Restaurant navigation={this.props.navigation} />

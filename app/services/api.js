@@ -51,6 +51,19 @@ const getUsersCourses = (userId, token) => {
   }).then(response => response.json());
 };
 
+const getCourseContent = courseId => {
+  const formData = new FormData();
+  formData.append('wstoken', global.USER.token);
+  formData.append('courseid', courseId);
+  formData.append('wsfunction', CONSTS.FUNCTION_GET_COURSE_CONTENTS);
+
+  return fetch(AVA_URL + CONSTS.URL_COMPLEMENT, {
+    method: 'POST',
+    body: formData,
+    headers
+  }).then(response => response.json());
+};
+
 const getSemester = () => {
   return fetch(FIREBASE_URL + 'currentSemester.json').then(response => response.text());
 };
@@ -63,4 +76,13 @@ const getCalendar = () => {
   return fetch(FIREBASE_URL + 'calendar.json').then(response => response.json());
 };
 
-export { login, getSiteInfo, getUserById, getUsersCourses, getSemester, getSchedules, getCalendar };
+export {
+  login,
+  getSiteInfo,
+  getUserById,
+  getUsersCourses,
+  getSemester,
+  getSchedules,
+  getCalendar,
+  getCourseContent
+};
