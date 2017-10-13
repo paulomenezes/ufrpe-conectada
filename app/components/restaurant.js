@@ -39,11 +39,7 @@ export default class Restaurant extends Component {
     };
   }
 
-  componentWillMount() {
-    this.getMenu();
-  }
-
-  getMenu() {
+  componentDidMount() {
     const req = new XMLHttpRequest();
     req.open('GET', 'http://restaurante.6te.net/restaurante.xml', true);
     req.responseType = 'arraybuffer';

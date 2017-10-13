@@ -20,7 +20,7 @@ class Welcome extends Component {
   render() {
     return (
       <View>
-        <View style={styles.content}>
+        <View>
           <Text style={styles.date}>
             {`${this.state.date.getDate()} de ${months[this.state.date.getMonth()].toLowerCase()}`}
           </Text>

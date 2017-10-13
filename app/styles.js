@@ -68,9 +68,13 @@ export default {
     backgroundColor: '#F1F1F1',
     borderRadius: 8,
     padding: 8,
-    width: 200,
+    width: 250,
     marginLeft: 16,
-    justifyContent: 'space-between'
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  whiteIcon: {
+    marginRight: 8
   },
   whiteTitle: {
     color: COLORS.blue,
@@ -126,7 +130,8 @@ export default {
     color: '#646464'
   },
   page: {
-    marginTop: 16
+    marginTop: 16,
+    flex: 1
   },
   pageTitle: {
     margin: 16,

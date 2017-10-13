@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, AsyncStorage } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { NavigationActions } from 'react-navigation';
 
 import styles from '../styles';
 
@@ -11,8 +12,9 @@ import Yellow from '../containers/yellow';
 import Pink from '../containers/pink';
 
 import { getCamelSentence } from '../util/functions';
+import { weekDays, months } from '../contants';
 
-class Home extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -24,13 +26,8 @@ class Home extends Component {
     };
   }
 
-  async componentWillMount() {
+  componentDidMount() {
     try {
-      const result = await AsyncStorage.getItem('user');
-
-      global.USER = JSON.parse(result);
-      console.log(global.USER);
-
       let today = this.state.date.getDay();
       if (today === 0 || today === 6) {
         today = 1;
@@ -51,8 +48,6 @@ class Home extends Component {
           }
         }
       });
-
-      console.log(todayCourses);
 
       this.setState({
         user: global.USER,
@@ -75,32 +70,33 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <View>
-          {!this.state.user && <Welcome navigation={this.props.navigation} />}
-          {this.state.user && (
-            <View>
-              <Text style={styles.pageTitle}>Terça, 10 de outubro</Text>
-              {this.state.today.map((today, index) => (
-                <TouchableOpacity
-                  key={index}
-                  style={styles.courseList}
-                  onPress={this.goToday.bind(this, today)}
-                >
-                  <Text style={styles.courseListTime}>
-                    {today.classes.schedules[this.state.dayOfWeek].timeStart +
-                      ' - ' +
-                      today.classes.schedules[this.state.dayOfWeek].timeEnd}
-                  </Text>
-                  <Text style={styles.courseListTitle}>{today.classes.name}</Text>
-                  <Text style={styles.courseListPlace}>{today.classes.place}</Text>
-                </TouchableOpacity>
-              ))}
-            </View>
-          )}
+          <View>
+            <Text style={styles.pageTitle}>
+              {weekDays[this.state.date.getDay()] +
+                ', ' +
+                this.state.date.getDate() +
+                ' de ' +
+                months[this.state.date.getMonth()].toLowerCase()}
+            </Text>
+            {this.state.today.map((today, index) => (
+              <TouchableOpacity
+                key={index}
+                style={[styles.courseList, { borderLeftColor: today.color }]}
+                onPress={this.goToday.bind(this, today)}
+              >
+                <Text style={styles.courseListTime}>
+                  {today.classes.schedules[this.state.dayOfWeek].timeStart +
+                    ' - ' +
+                    today.classes.schedules[this.state.dayOfWeek].timeEnd}
+                </Text>
+                <Text style={styles.courseListTitle}>{today.classes.name}</Text>
+                <Text style={styles.courseListPlace}>{today.classes.place}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
           <Restaurant navigation={this.props.navigation} />
         </View>
       </View>
     );
   }
 }
-
-module.exports = Home;

@@ -46,7 +46,7 @@ export default class Restaurant extends Component {
 
   render() {
     return (
-      <View style={styles.content}>
+      <View>
         <Blue title="Almoço" description={this.state.description}>
           <ScrollView horizontal>
             {Object.keys(meals).map(

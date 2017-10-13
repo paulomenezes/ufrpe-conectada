@@ -16,11 +16,11 @@ import Welcome from '../components/welcome';
 import Restaurant from '../components/restaurant';
 import DarkButton from '../components/darkButton';
 
-import { SEMESTER } from '../contants';
+import { SEMESTER, COURSE_COLORS } from '../contants';
 import { login, getSiteInfo, getUsersCourses, getSemester, getSchedules } from '../services/api';
 import { getCamelSentence } from '../util/functions';
 
-class Login extends Component {
+export default class Login extends Component {
   constructor(props) {
     super(props);
 
@@ -52,8 +52,16 @@ class Login extends Component {
         const semester = currentSemester.substr(1, 6);
 
         const courses = [];
+        let c = 0;
         usersCourses.forEach(course => {
           if (course.shortname.indexOf(semester) >= 0) {
+            course.color = COURSE_COLORS[c];
+            c++;
+
+            if (c === COURSE_COLORS.length) {
+              c = 0;
+            }
+
             courses.push(course);
           }
         });
@@ -144,5 +152,3 @@ class Login extends Component {
     );
   }
 }
-
-module.exports = Login;
