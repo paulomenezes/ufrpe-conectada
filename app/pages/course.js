@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   AsyncStorage,
   ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
+  FlatList
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -20,7 +21,7 @@ import White from '../containers/white';
 import { getCourseContent } from '../services/api';
 import { getCamelSentence } from '../util/functions';
 
-import { MIME_TYPES } from '../contants';
+import { MIME_TYPES, weekDaysShort } from '../contants';
 
 export default class Course extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -33,24 +34,27 @@ export default class Course extends Component {
     this.state = {
       loading: true,
       course: props.navigation.state.params.course,
-      contents: [],
-      dayOfWeek: props.navigation.state.params.dayOfWeek
+      contents: []
     };
+
+    this.renderItem = this.renderItem.bind(this);
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     await this.getCourseContent();
   }
 
   async getCourseContent() {
     try {
       const contents = await getCourseContent(this.state.course.id);
-      this.setState({
-        contents,
-        loading: false
-      });
+      if (contents) {
+        this.setState({
+          contents,
+          loading: false
+        });
 
-      this.forceUpdate();
+        this.forceUpdate();
+      }
     } catch (error) {
       this.setState({
         loading: false
@@ -78,54 +82,67 @@ export default class Course extends Component {
     });
   }
 
+  _keyExtractor = (item, index) => item.id;
+
+  renderItem({ item }) {
+    return (
+      <View>
+        <View style={{ borderBottomWidth: 1, borderBottomColor: '#DDD' }}>
+          <Text
+            style={{
+              paddingHorizontal: 16,
+              paddingTop: 16,
+              paddingBottom: 8,
+              fontWeight: 'bold'
+            }}
+          >
+            {item.name}
+          </Text>
+          <ScrollView horizontal>
+            {item.modules.map((module, index) => (
+              <White
+                key={index}
+                title={module.name}
+                description={module.modplural}
+                image={this.getImage(module)}
+              />
+            ))}
+          </ScrollView>
+          <TouchableOpacity style={styles.seeMore} onPress={this.openModule.bind(this, item)}>
+            <Text style={styles.seeMoreText}>Ver detalhes</Text>
+            <Icon style={styles.seeMoreText} name="keyboard-arrow-right" size={20} />
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
   render() {
     return (
       <View style={styles.page}>
         <View style={[styles.courseList, { borderLeftColor: this.state.course.color }]}>
-          <Text style={styles.courseListTime}>
-            {this.state.course.classes.schedules[this.state.dayOfWeek].timeStart +
-              ' - ' +
-              this.state.course.classes.schedules[this.state.dayOfWeek].timeEnd}
-          </Text>
+          {this.state.course.classes.schedules
+            .sort((a, b) => a.dayOfWeek > b.dayOfWeek)
+            .map((schedule, index) => (
+              <Text key={index} style={styles.courseListTime}>
+                {weekDaysShort[schedule.dayOfWeek] +
+                  ': ' +
+                  schedule.timeStart +
+                  ' - ' +
+                  schedule.timeEnd}
+              </Text>
+            ))}
           <Text style={styles.courseListTitle}>{this.state.course.classes.name}</Text>
           <Text style={styles.courseListPlace}>{this.state.course.classes.place}</Text>
         </View>
 
         <ScrollView>
           {this.state.loading && <ActivityIndicator />}
-          {this.state.contents.map((content, index) => (
-            <View key={index}>
-              <View style={{ borderBottomWidth: 1, borderBottomColor: '#DDD' }}>
-                <Text
-                  style={{
-                    paddingHorizontal: 16,
-                    paddingTop: 16,
-                    paddingBottom: 8,
-                    fontWeight: 'bold'
-                  }}
-                >
-                  {content.name}
-                </Text>
-                <ScrollView horizontal>
-                  {content.modules.map((module, index) => (
-                    <White
-                      key={index}
-                      title={module.name}
-                      description={module.modplural}
-                      image={this.getImage(module)}
-                    />
-                  ))}
-                </ScrollView>
-                <TouchableOpacity
-                  style={styles.seeMore}
-                  onPress={this.openModule.bind(this, content)}
-                >
-                  <Text style={styles.seeMoreText}>Ver detalhes</Text>
-                  <Icon style={styles.seeMoreText} name="keyboard-arrow-right" size={20} />
-                </TouchableOpacity>
-              </View>
-            </View>
-          ))}
+          <FlatList
+            data={this.state.contents}
+            keyExtractor={this._keyExtractor}
+            renderItem={this.renderItem}
+          />
         </ScrollView>
       </View>
     );

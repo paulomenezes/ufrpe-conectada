@@ -76,6 +76,46 @@ const getCalendar = () => {
   return fetch(FIREBASE_URL + 'calendar.json').then(response => response.json());
 };
 
+const getCalendarEvents = (timeStart, timeEnd, courseId) => {
+  const formData = new FormData();
+
+  formData.append('options[userevents]', 1);
+  formData.append('options[siteevents]', 1);
+  formData.append('options[timestart]', timeStart);
+  formData.append('options[timeend]', timeEnd);
+  courseId.forEach(id => {
+    formData.append('events[courseids][]', id);
+  });
+  formData.append('wsfunction', CONSTS.FUNCTION_GET_CALENDAR_EVENTS);
+  formData.append('wstoken', global.USER.token);
+
+  return fetch(AVA_URL + CONSTS.URL_COMPLEMENT, {
+    method: 'POST',
+    body: formData,
+    headers
+  }).then(response => response.json());
+};
+
+const getMessages = (userIdTo, userIdFrom) => {
+  const formData = new FormData();
+
+  formData.append('useridto', userIdTo);
+  formData.append('useridfrom', userIdFrom);
+  formData.append('limitfrom', 0);
+  formData.append('limitnum', 100);
+  formData.append('read', 1);
+  formData.append('type', 'conversations');
+  formData.append('newestfirst', 1);
+  formData.append('wsfunction', CONSTS.FUNCTION_GET_MESSAGES);
+  formData.append('wstoken', global.USER.token);
+
+  return fetch(AVA_URL + CONSTS.URL_COMPLEMENT, {
+    method: 'POST',
+    body: formData,
+    headers
+  }).then(response => response.json());
+};
+
 export {
   login,
   getSiteInfo,
@@ -84,5 +124,7 @@ export {
   getSemester,
   getSchedules,
   getCalendar,
-  getCourseContent
+  getCourseContent,
+  getCalendarEvents,
+  getMessages
 };

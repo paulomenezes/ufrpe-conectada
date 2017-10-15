@@ -10,6 +10,10 @@ import Restaurant from '../components/restaurant';
 export default class Home extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      loading: true
+    };
   }
 
   async componentDidMount() {
@@ -25,6 +29,10 @@ export default class Home extends Component {
         });
 
         this.props.navigation.dispatch(resetAction);
+      } else {
+        this.setState({
+          loading: false
+        });
       }
     } catch (error) {}
   }
@@ -32,10 +40,12 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View>
-          <Welcome navigation={this.props.navigation} />
-          <Restaurant navigation={this.props.navigation} />
-        </View>
+        {!this.state.loading && (
+          <View>
+            <Welcome navigation={this.props.navigation} />
+            <Restaurant navigation={this.props.navigation} />
+          </View>
+        )}
       </View>
     );
   }

@@ -1,0 +1,1558 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9490359, -8.0136736, 0]
+      },
+      "properties": {
+        "name": "Biblioteca Central",
+        "styleUrl": "#icon-985-nodesc",
+        "styleHash": "6adeb61c",
+        "styleMapHash": {
+          "normal": "#icon-985-nodesc-normal",
+          "highlight": "#icon-985-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9513775, -8.0144411, 0]
+      },
+      "properties": {
+        "name": "DCE",
+        "styleUrl": "#icon-1037",
+        "styleHash": "-23b52b9a",
+        "styleMapHash": {
+          "normal": "#icon-1037-normal",
+          "highlight": "#icon-1037-highlight"
+        },
+        "description": "Diretório Central dos Estudantes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9505675, -8.0136921, 0]
+      },
+      "properties": {
+        "name": "Biologia",
+        "styleUrl": "#icon-1037-nodesc",
+        "styleHash": "-3c97a0e3",
+        "styleMapHash": {
+          "normal": "#icon-1037-nodesc-normal",
+          "highlight": "#icon-1037-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9500726, -8.0173163, 0]
+      },
+      "properties": {
+        "name": "CEGOE",
+        "styleUrl": "#icon-1037-nodesc",
+        "styleHash": "-3c97a0e3",
+        "styleMapHash": {
+          "normal": "#icon-1037-nodesc-normal",
+          "highlight": "#icon-1037-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9442804, -8.017785, 0]
+      },
+      "properties": {
+        "name": "CEAGRI 1",
+        "styleUrl": "#icon-1037-nodesc",
+        "styleHash": "-3c97a0e3",
+        "styleMapHash": {
+          "normal": "#icon-1037-nodesc-normal",
+          "highlight": "#icon-1037-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9443153, -8.0175513, 0]
+      },
+      "properties": {
+        "name": "CEAGRI 2",
+        "styleUrl": "#icon-1037",
+        "styleHash": "-23b52b9a",
+        "styleMapHash": {
+          "normal": "#icon-1037-normal",
+          "highlight": "#icon-1037-highlight"
+        },
+        "gx_media_links":
+          "https://lh6.googleusercontent.com/proxy/uJi592LHnwVF5ypABe_txqVHa2FQQ25FA3aSUqPAcSK7PbevNk87jorKOvs1-sxtXoLRdnYg8ja2d8nFmibGS2jnVVn27SAUYpHxTSS2dEEu4ysNFcyQlu9qSw"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9441168, -8.0162897, 0]
+      },
+      "properties": {
+        "name": "Casa de Estudantes",
+        "styleUrl": "#icon-1035-nodesc",
+        "styleHash": "d6bdbad",
+        "styleMapHash": {
+          "normal": "#icon-1035-nodesc-normal",
+          "highlight": "#icon-1035-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9511227, -8.0168368, 0]
+      },
+      "properties": {
+        "name": "Casa de Estudantes (Feminina)",
+        "styleUrl": "#icon-1035-nodesc",
+        "styleHash": "d6bdbad",
+        "styleMapHash": {
+          "normal": "#icon-1035-nodesc-normal",
+          "highlight": "#icon-1035-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9475285, -8.0152937, 0]
+      },
+      "properties": {
+        "name": "Casa de Estudantes (Homens)",
+        "styleUrl": "#icon-1035-nodesc",
+        "styleHash": "d6bdbad",
+        "styleMapHash": {
+          "normal": "#icon-1035-nodesc-normal",
+          "highlight": "#icon-1035-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9493551, -8.0183454, 0]
+      },
+      "properties": {
+        "name": "PAPE",
+        "styleUrl": "#icon-503-DB4436",
+        "styleHash": "-716a1277",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-normal",
+          "highlight": "#icon-503-DB4436-highlight"
+        },
+        "description": "Programa de Associativismo para Pesquisa, Ensino e Extensão"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.948752, -8.014627, 0]
+      },
+      "properties": {
+        "name": "Hospital Veterinário",
+        "styleUrl": "#icon-1205-nodesc",
+        "styleHash": "-2e8d9af7",
+        "styleMapHash": {
+          "normal": "#icon-1205-nodesc-normal",
+          "highlight": "#icon-1205-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9513641, -8.0153017, 0]
+      },
+      "properties": {
+        "name": "Laboratórios de Química",
+        "styleUrl": "#icon-1127-nodesc",
+        "styleHash": "7df6f717",
+        "styleMapHash": {
+          "normal": "#icon-1127-nodesc-normal",
+          "highlight": "#icon-1127-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9437252, -8.0198195, 0]
+      },
+      "properties": {
+        "name": "Laboratório de Piscicultura Marinha",
+        "styleUrl": "#icon-1127-nodesc",
+        "styleHash": "7df6f717",
+        "styleMapHash": {
+          "normal": "#icon-1127-nodesc-normal",
+          "highlight": "#icon-1127-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9440283, -8.0184145, 0]
+      },
+      "properties": {
+        "name": "Laboratório Gastronomia",
+        "styleUrl": "#icon-1127-nodesc",
+        "styleHash": "7df6f717",
+        "styleMapHash": {
+          "normal": "#icon-1127-nodesc-normal",
+          "highlight": "#icon-1127-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9503797, -8.0133521, 0]
+      },
+      "properties": {
+        "name": "Laboratório de Zoologia",
+        "styleUrl": "#icon-1127-nodesc",
+        "styleHash": "7df6f717",
+        "styleMapHash": {
+          "normal": "#icon-1127-nodesc-normal",
+          "highlight": "#icon-1127-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9453157, -8.0168421, 0]
+      },
+      "properties": {
+        "name": "Laboratório de solos\n",
+        "styleUrl": "#icon-1127-nodesc",
+        "styleHash": "7df6f717",
+        "styleMapHash": {
+          "normal": "#icon-1127-nodesc-normal",
+          "highlight": "#icon-1127-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9457127, -8.0180984, 0]
+      },
+      "properties": {
+        "name": "Viveiro de Eng. Florestal",
+        "styleUrl": "#icon-1157-nodesc",
+        "styleHash": "5f7d324b",
+        "styleMapHash": {
+          "normal": "#icon-1157-nodesc-normal",
+          "highlight": "#icon-1157-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9502188, -8.0165447, 0]
+      },
+      "properties": {
+        "name": "??",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "styleHash": "220200e0",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-nodesc-normal",
+          "highlight": "#icon-503-DB4436-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9504843, -8.017283, 0]
+      },
+      "properties": {
+        "name": "???2",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "styleHash": "220200e0",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-nodesc-normal",
+          "highlight": "#icon-503-DB4436-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9452406, -8.0200081, 0]
+      },
+      "properties": {
+        "name": "??",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "styleHash": "220200e0",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-nodesc-normal",
+          "highlight": "#icon-503-DB4436-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9495858, -8.0169457, 0]
+      },
+      "properties": {
+        "name": "??",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "styleHash": "220200e0",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-nodesc-normal",
+          "highlight": "#icon-503-DB4436-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.949854, -8.0162977, 0]
+      },
+      "properties": {
+        "name": "???",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "styleHash": "220200e0",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-nodesc-normal",
+          "highlight": "#icon-503-DB4436-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9450797, -8.0173733, 0]
+      },
+      "properties": {
+        "name": "??",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "styleHash": "220200e0",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-nodesc-normal",
+          "highlight": "#icon-503-DB4436-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9454793, -8.0173893, 0]
+      },
+      "properties": {
+        "name": "Diretoria Depto Agronomia\n",
+        "styleUrl": "#icon-503-DB4436",
+        "styleHash": "-716a1277",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-normal",
+          "highlight": "#icon-503-DB4436-highlight"
+        },
+        "description": "*Detalhar localização"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9482581, -8.0156496, 0]
+      },
+      "properties": {
+        "name": "Necrópsia ?",
+        "styleUrl": "#icon-1205-nodesc",
+        "styleHash": "-2e8d9af7",
+        "styleMapHash": {
+          "normal": "#icon-1205-nodesc-normal",
+          "highlight": "#icon-1205-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.950436, -8.017563, 0]
+      },
+      "properties": {
+        "name": "CENAPESQ",
+        "styleUrl": "#icon-1037",
+        "styleHash": "-23b52b9a",
+        "styleMapHash": {
+          "normal": "#icon-1037-normal",
+          "highlight": "#icon-1037-highlight"
+        },
+        "description": "Centro de Apoio á Pesquisa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9507096, -8.0142286, 0]
+      },
+      "properties": {
+        "name": "DRCA",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Diretório Central Acadêmico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9438432, -8.019445, 0]
+      },
+      "properties": {
+        "name": "DEPAq",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Prédio Yoshito Motohashi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9437144, -8.0199735, 0]
+      },
+      "properties": {
+        "name": "DEPAq - Galpão",
+        "styleUrl": "#icon-1197-nodesc",
+        "styleHash": "-bc9d789",
+        "styleMapHash": {
+          "normal": "#icon-1197-nodesc-normal",
+          "highlight": "#icon-1197-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9491996, -8.0181861, 0]
+      },
+      "properties": {
+        "name": "DEFIS",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Departamento de Educação Física"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9511173, -8.0161224, 0]
+      },
+      "properties": {
+        "name": "DEINFO",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Departamento de Estatística e Informática"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.949567, -8.0172485, 0]
+      },
+      "properties": {
+        "name": "ACI",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Térreo - Sala ?"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.951198, -8.016048, 0]
+      },
+      "properties": {
+        "name": "Departamento de Matemática e Física",
+        "styleUrl": "#icon-1197-nodesc",
+        "styleHash": "-bc9d789",
+        "styleMapHash": {
+          "normal": "#icon-1197-nodesc-normal",
+          "highlight": "#icon-1197-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.954199, -8.02009, 0]
+      },
+      "properties": {
+        "name": "Departamento De Zootecnia",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description":
+          "Diretor: Professor Wilson Moreira Dutra Júnior.<br>Fone: 3320.6550.<br>E-Mail: diretoria@dz.ufrpe.br"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9497655, -8.0166961, 0]
+      },
+      "properties": {
+        "name": "Departamento de Engenharia de Pesca",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Qual a sigla??"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.945761, -8.0170281, 0]
+      },
+      "properties": {
+        "name": "Dep. Ciência Florestal ",
+        "styleUrl": "#icon-1197-nodesc",
+        "styleHash": "-bc9d789",
+        "styleMapHash": {
+          "normal": "#icon-1197-nodesc-normal",
+          "highlight": "#icon-1197-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9480784, -8.0150148, 0]
+      },
+      "properties": {
+        "name": "Departamento de Veterinária\n",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description":
+          "Diretor: Prof. Lúcio Esmeraldo Honório de Melo<br>Vice-diretora: Rita de Cassia Carvalho Maia<br>E-Mail:diretoria@dmv.ufrpe.br"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.947837, -8.0136656, 0]
+      },
+      "properties": {
+        "name": "DQV",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Departamento de Qualidade de Vida"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9472898, -8.0144995, 0]
+      },
+      "properties": {
+        "name": "PROEXT",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Pró-reitoria de Extensão"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9499519, -8.0187598, 0]
+      },
+      "properties": {
+        "name": "DLCH",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Departamento de Letras e Ciências Humanas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9453586, -8.0171423, 0]
+      },
+      "properties": {
+        "name": "DTR",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description": "Departamento de Tecnologia da Rural"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.947974, -8.0138687, 0]
+      },
+      "properties": {
+        "name": "PROGEST",
+        "styleUrl": "#icon-1197",
+        "styleHash": "-5d26aa9c",
+        "styleMapHash": {
+          "normal": "#icon-1197-normal",
+          "highlight": "#icon-1197-highlight"
+        },
+        "description":
+          "*Detalhar o andar e número da sala.                         Pró-Reitoria de Gestão Estudantil"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9501182, -8.0159046, 0]
+      },
+      "properties": {
+        "name": "Prédio Central e CEGOE",
+        "styleUrl": "#icon-1423",
+        "styleHash": "-78b6da4f",
+        "styleMapHash": {
+          "normal": "#icon-1423-normal",
+          "highlight": "#icon-1423-highlight"
+        },
+        "description": "Sentido: Av. Caxangá - Macaxeira"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9510516, -8.0164942, 0]
+      },
+      "properties": {
+        "name": "Prédio Central e CEGOE",
+        "styleUrl": "#icon-1423",
+        "styleHash": "-78b6da4f",
+        "styleMapHash": {
+          "normal": "#icon-1423-normal",
+          "highlight": "#icon-1423-highlight"
+        },
+        "description": "Sentido: Macaxeira -  Av. Caxangá"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9474159, -8.0149458, 0]
+      },
+      "properties": {
+        "name": "Veterinária",
+        "styleUrl": "#icon-1423",
+        "styleHash": "-78b6da4f",
+        "styleMapHash": {
+          "normal": "#icon-1423-normal",
+          "highlight": "#icon-1423-highlight"
+        },
+        "description": "Muito perigosa. Vários assaltos inclusive de dia."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9435803, -8.0159125, 0]
+      },
+      "properties": {
+        "name": "CEAGRI / LAFEPE",
+        "styleUrl": "#icon-1423-nodesc",
+        "styleHash": "5a157ad4",
+        "styleMapHash": {
+          "normal": "#icon-1423-nodesc-normal",
+          "highlight": "#icon-1423-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9440068, -8.01587, 0]
+      },
+      "properties": {
+        "name": "Praça Dois Irmãos",
+        "styleUrl": "#icon-1423",
+        "styleHash": "-78b6da4f",
+        "styleMapHash": {
+          "normal": "#icon-1423-normal",
+          "highlight": "#icon-1423-highlight"
+        },
+        "description":
+          "Sentido: Macaxeira - Av. Caxangá<br>Melhor não ficar após as 19h ! Espero o Circular e pegue no Prédio Central."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9549609, -8.0204729, 0]
+      },
+      "properties": {
+        "name": "Zootecnia",
+        "styleUrl": "#icon-1423",
+        "styleHash": "-78b6da4f",
+        "styleMapHash": {
+          "normal": "#icon-1423-normal",
+          "highlight": "#icon-1423-highlight"
+        },
+        "description": "Sentido: Av. Caxangá - Macaxeira<br>RISCO ALTÍSSIMO DE ASSALTOS!!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9547732, -8.0199921, 0]
+      },
+      "properties": {
+        "name": "Zootecnia",
+        "styleUrl": "#icon-1423",
+        "styleHash": "-78b6da4f",
+        "styleMapHash": {
+          "normal": "#icon-1423-normal",
+          "highlight": "#icon-1423-highlight"
+        },
+        "description": "Sentido: Macaxeira - Av. Caxangá<br>RISCO ALTÍSSIMO DE ASSALTOS!!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9482313, -8.0140746, 0]
+      },
+      "properties": {
+        "name": "Biblioteca",
+        "styleUrl": "#icon-1423",
+        "styleHash": "-78b6da4f",
+        "styleMapHash": {
+          "normal": "#icon-1423-normal",
+          "highlight": "#icon-1423-highlight"
+        },
+        "description":
+          "Sentido: Macaxeira - Av. Caxangá<br>Muitos assaltos!! Melhor ir para a parada do Prédio Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9450394, -8.0167571, 0]
+      },
+      "properties": {
+        "name": "Parada Ceagri - Circular",
+        "styleUrl": "#icon-1453-nodesc",
+        "styleHash": "-60c1233a",
+        "styleMapHash": {
+          "normal": "#icon-1453-nodesc-normal",
+          "highlight": "#icon-1453-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9486899, -8.0140321, 0]
+      },
+      "properties": {
+        "name": "Parada Biblioteca - Circular",
+        "styleUrl": "#icon-1453-nodesc",
+        "styleHash": "-60c1233a",
+        "styleMapHash": {
+          "normal": "#icon-1453-nodesc-normal",
+          "highlight": "#icon-1453-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.950031, -8.017469, 0]
+      },
+      "properties": {
+        "name": "Parada CEGOE",
+        "styleUrl": "#icon-1453-nodesc",
+        "styleHash": "-60c1233a",
+        "styleMapHash": {
+          "normal": "#icon-1453-nodesc-normal",
+          "highlight": "#icon-1453-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9544272, -8.0200453, 0]
+      },
+      "properties": {
+        "name": "Parada Zootecnia",
+        "styleUrl": "#icon-1453-nodesc",
+        "styleHash": "-60c1233a",
+        "styleMapHash": {
+          "normal": "#icon-1453-nodesc-normal",
+          "highlight": "#icon-1453-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9447069, -8.0178514, 0]
+      },
+      "properties": {
+        "name": "Parada Ceagri - Circular",
+        "styleUrl": "#icon-1453-nodesc",
+        "styleHash": "-60c1233a",
+        "styleMapHash": {
+          "normal": "#icon-1453-nodesc-normal",
+          "highlight": "#icon-1453-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.949972, -8.0146695, 0]
+      },
+      "properties": {
+        "name": "Campo de Futebol e Rugby",
+        "styleUrl": "#icon-1389",
+        "styleHash": "-17af2eb6",
+        "styleMapHash": {
+          "normal": "#icon-1389-normal",
+          "highlight": "#icon-1389-highlight"
+        },
+        "description": "Prédio Central - UFRPE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9502027, -8.0145739, 0]
+      },
+      "properties": {
+        "name": "Pista de atletismo",
+        "styleUrl": "#icon-1469",
+        "styleHash": "1abe2a58",
+        "styleMapHash": {
+          "normal": "#icon-1469-normal",
+          "highlight": "#icon-1469-highlight"
+        },
+        "description": "Prédio Central - UFRPE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9493578, -8.0142393, 0]
+      },
+      "properties": {
+        "name": "Quadra Poliesportiva Descoberta",
+        "styleUrl": "#icon-1353-nodesc",
+        "styleHash": "-8ee58f7",
+        "styleMapHash": {
+          "normal": "#icon-1353-nodesc-normal",
+          "highlight": "#icon-1353-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9503958, -8.0152167, 0]
+      },
+      "properties": {
+        "name": "Quadra de Vôlei Descoberta",
+        "styleUrl": "#icon-1353",
+        "styleHash": "-4c426af2",
+        "styleMapHash": {
+          "normal": "#icon-1353-normal",
+          "highlight": "#icon-1353-highlight"
+        },
+        "description": "Prédio Central - UFRPE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9504481, -8.0156669, 0]
+      },
+      "properties": {
+        "name": "Piscina",
+        "styleUrl": "#icon-1395",
+        "styleHash": "-22e25a15",
+        "styleMapHash": {
+          "normal": "#icon-1395-normal",
+          "highlight": "#icon-1395-highlight"
+        },
+        "description":
+          "<img src=\"https://lh6.googleusercontent.com/proxy/7pXek3HMGOQJjaK2B-UJG1V81vjXHUKx1Slz7HQcWHibYF-m_K1di9A9O5rLJvxK0LD3nbR3tMpan0DSLxH0LZbJKZxnO7XSlN1GRtYQXe1n-iTZcURgZ-Zo\" height=\"200\" width=\"auto\" /><br><br>",
+        "gx_media_links":
+          "https://lh6.googleusercontent.com/proxy/7pXek3HMGOQJjaK2B-UJG1V81vjXHUKx1Slz7HQcWHibYF-m_K1di9A9O5rLJvxK0LD3nbR3tMpan0DSLxH0LZbJKZxnO7XSlN1GRtYQXe1n-iTZcURgZ-Zo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9493028, -8.0178939, 0]
+      },
+      "properties": {
+        "name": "Quadra Poliesportiva Coberta",
+        "styleUrl": "#icon-1353-nodesc",
+        "styleHash": "-8ee58f7",
+        "styleMapHash": {
+          "normal": "#icon-1353-nodesc-normal",
+          "highlight": "#icon-1353-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-34.9501598, -8.0174371, 0],
+          [-34.9505299, -8.0177399, 0],
+          [-34.9503475, -8.0179258, 0],
+          [-34.9501222, -8.0181914, 0],
+          [-34.9502939, -8.0183295, 0],
+          [-34.95031, -8.0184357, 0],
+          [-34.9502456, -8.0186057, 0],
+          [-34.950074, -8.0189616, 0],
+          [-34.949854, -8.019445, 0],
+          [-34.9498218, -8.0196628, 0],
+          [-34.9498057, -8.0198275, 0],
+          [-34.9495912, -8.020194, 0],
+          [-34.9495322, -8.020279, 0],
+          [-34.9492908, -8.0205074, 0],
+          [-34.9485826, -8.0202843, 0],
+          [-34.9478799, -8.0196256, 0],
+          [-34.9451333, -8.0190466, 0],
+          [-34.9444681, -8.0188394, 0],
+          [-34.9447203, -8.0179417, 0]
+        ]
+      },
+      "properties": {
+        "name": "Ceagri -> Cegoe (Transrural)",
+        "styleUrl": "#line-62AF44-8363",
+        "styleHash": "-311ee4b8",
+        "styleMapHash": {
+          "normal": "#line-62AF44-8363-normal",
+          "highlight": "#line-62AF44-8363-highlight"
+        },
+        "description":
+          "CUIDADO COM A ÚLTIMA CURVA!<br>Muito fechada e sem visão dos outros veículos!<br>Tem ciclofaixa e é bem iluminado.<br>Não aconselhado ir a pé.",
+        "stroke": "#62af44",
+        "stroke-opacity": 1,
+        "stroke-width": 8.363
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-34.9501598, -8.0174371, 0],
+          [-34.9504012, -8.0171529, 0],
+          [-34.9499157, -8.0166987, 0],
+          [-34.9494973, -8.016295, 0],
+          [-34.9492452, -8.0160241, 0],
+          [-34.9487382, -8.0157266, 0],
+          [-34.9483842, -8.0155088, 0],
+          [-34.9480301, -8.0152724, 0],
+          [-34.9477994, -8.0150812, 0],
+          [-34.9477592, -8.015044, 0],
+          [-34.9480462, -8.0145713, 0],
+          [-34.948191, -8.0143508, 0],
+          [-34.9482393, -8.0143189, 0],
+          [-34.9483091, -8.0143402, 0],
+          [-34.9484378, -8.0143933, 0]
+        ]
+      },
+      "properties": {
+        "name": "Cegoe -> Veterinária (Transrural)",
+        "styleUrl": "#line-62AF44-9525",
+        "styleHash": "-75aa7b76",
+        "styleMapHash": {
+          "normal": "#line-62AF44-9525-normal",
+          "highlight": "#line-62AF44-9525-highlight"
+        },
+        "description": "Não aconselhavél sozinho e/ou a noite.",
+        "stroke": "#62af44",
+        "stroke-opacity": 1,
+        "stroke-width": 9.525
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-34.9447337, -8.0178514, 0],
+          [-34.9451709, -8.0166828, 0],
+          [-34.9458253, -8.0169059, 0],
+          [-34.9460506, -8.0167571, 0],
+          [-34.9459541, -8.0161728, 0],
+          [-34.9461687, -8.0160666, 0],
+          [-34.9463511, -8.0159285, 0],
+          [-34.9467266, -8.0155354, 0],
+          [-34.9471021, -8.0151529, 0],
+          [-34.9477673, -8.0144836, 0],
+          [-34.9480784, -8.0142286, 0],
+          [-34.9484754, -8.0140905, 0],
+          [-34.9489152, -8.0140055, 0],
+          [-34.9493337, -8.0140799, 0],
+          [-34.9496663, -8.014133, 0],
+          [-34.9498487, -8.0139949, 0],
+          [-34.9501812, -8.0141543, 0],
+          [-34.9505031, -8.0145075, 0],
+          [-34.9510814, -8.014161, 0]
+        ]
+      },
+      "properties": {
+        "name": "Ceagri -> RU",
+        "styleUrl": "#line-F4EB37-8556",
+        "styleHash": "-a8a5c98",
+        "styleMapHash": {
+          "normal": "#line-F4EB37-8556-normal",
+          "highlight": "#line-F4EB37-8556-highlight"
+        },
+        "description": "A pé.<br>Se possível faça acompanhado e evite esse trajeto a noite!",
+        "stroke": "#f4eb37",
+        "stroke-opacity": 1,
+        "stroke-width": 8.556
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-34.9445593, -8.0180427, 0],
+            [-34.9444708, -8.0183189, 0],
+            [-34.9440202, -8.0181728, 0],
+            [-34.9441248, -8.0178913, 0],
+            [-34.9445593, -8.0180427, 0]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Estacionamento - Ceagri",
+        "styleUrl": "#poly-000000-1200-76-nodesc",
+        "styleHash": "512e4b74",
+        "styleMapHash": {
+          "normal": "#poly-000000-1200-76-nodesc-normal",
+          "highlight": "#poly-000000-1200-76-nodesc-highlight"
+        },
+        "stroke": "#000000",
+        "stroke-opacity": 1,
+        "stroke-width": 1.2,
+        "fill": "#000000",
+        "fill-opacity": 0.2980392156862745
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-34.9503797, -8.0135673, 0],
+            [-34.9502845, -8.0137798, 0],
+            [-34.950027, -8.0136735, 0],
+            [-34.9501491, -8.0134438, 0],
+            [-34.9503797, -8.0135673, 0]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Estacionamento - Biologia",
+        "styleUrl": "#poly-000000-1200-76-nodesc",
+        "styleHash": "512e4b74",
+        "styleMapHash": {
+          "normal": "#poly-000000-1200-76-nodesc-normal",
+          "highlight": "#poly-000000-1200-76-nodesc-highlight"
+        },
+        "stroke": "#000000",
+        "stroke-opacity": 1,
+        "stroke-width": 1.2,
+        "fill": "#000000",
+        "fill-opacity": 0.2980392156862745
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-34.9510235, -8.015797, 0],
+            [-34.9509363, -8.0158435, 0],
+            [-34.9508974, -8.0158608, 0],
+            [-34.9508666, -8.0158621, 0],
+            [-34.9508478, -8.0158608, 0],
+            [-34.9508223, -8.0158461, 0],
+            [-34.9508022, -8.0158262, 0],
+            [-34.95077, -8.0157718, 0],
+            [-34.9507485, -8.0157187, 0],
+            [-34.9507177, -8.0156483, 0],
+            [-34.9507512, -8.0156191, 0],
+            [-34.9507982, -8.0157319, 0],
+            [-34.9508397, -8.0157997, 0],
+            [-34.9508585, -8.0158103, 0],
+            [-34.9508826, -8.0158129, 0],
+            [-34.9510007, -8.0157598, 0],
+            [-34.9510235, -8.015797, 0]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Estacionamento - Deinfo",
+        "styleUrl": "#poly-000000-1200-76-nodesc",
+        "styleHash": "512e4b74",
+        "styleMapHash": {
+          "normal": "#poly-000000-1200-76-nodesc-normal",
+          "highlight": "#poly-000000-1200-76-nodesc-highlight"
+        },
+        "stroke": "#000000",
+        "stroke-opacity": 1,
+        "stroke-width": 1.2,
+        "fill": "#000000",
+        "fill-opacity": 0.2980392156862745
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-34.9494597, -8.0153495, 0],
+            [-34.949441, -8.0153149, 0],
+            [-34.9494597, -8.0152485, 0],
+            [-34.9494544, -8.0151582, 0],
+            [-34.9494034, -8.0151211, 0],
+            [-34.9493203, -8.01506, 0],
+            [-34.9492988, -8.0150148, 0],
+            [-34.9491701, -8.0147014, 0],
+            [-34.9491271, -8.0146483, 0],
+            [-34.9490413, -8.0146138, 0],
+            [-34.9488133, -8.0145128, 0],
+            [-34.9485853, -8.0144225, 0],
+            [-34.9483547, -8.0143216, 0],
+            [-34.9483037, -8.0142711, 0],
+            [-34.9484754, -8.0142393, 0],
+            [-34.9486417, -8.0142605, 0],
+            [-34.9488482, -8.0143083, 0],
+            [-34.9490413, -8.0144146, 0],
+            [-34.9492478, -8.0146908, 0],
+            [-34.9494302, -8.0149564, 0],
+            [-34.9495643, -8.0151343, 0],
+            [-34.9496529, -8.0153574, 0],
+            [-34.9497172, -8.0154345, 0],
+            [-34.9499023, -8.0156894, 0],
+            [-34.9498862, -8.0157213, 0],
+            [-34.9495509, -8.0159843, 0],
+            [-34.9493659, -8.0157877, 0],
+            [-34.9496099, -8.0155912, 0],
+            [-34.9496099, -8.0155168, 0],
+            [-34.9495885, -8.0154451, 0],
+            [-34.9495724, -8.0154106, 0],
+            [-34.9494597, -8.0153495, 0]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Estacionamento - Veterinária",
+        "styleUrl": "#poly-000000-1200-76-nodesc",
+        "styleHash": "512e4b74",
+        "styleMapHash": {
+          "normal": "#poly-000000-1200-76-nodesc-normal",
+          "highlight": "#poly-000000-1200-76-nodesc-highlight"
+        },
+        "stroke": "#000000",
+        "stroke-opacity": 1,
+        "stroke-width": 1.2,
+        "fill": "#000000",
+        "fill-opacity": 0.2980392156862745
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.951234, -8.0143123, 0]
+      },
+      "properties": {
+        "name": "Santander",
+        "styleUrl": "#icon-971",
+        "styleHash": "-1ff9975d",
+        "styleMapHash": {
+          "normal": "#icon-971-normal",
+          "highlight": "#icon-971-highlight"
+        },
+        "description": "Agência Santander"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9508598, -8.0141277, 0]
+      },
+      "properties": {
+        "name": "Bradesco",
+        "styleUrl": "#icon-971",
+        "styleHash": "-1ff9975d",
+        "styleMapHash": {
+          "normal": "#icon-971-normal",
+          "highlight": "#icon-971-highlight"
+        },
+        "description": "Agência Bradesco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.950027, -8.0172538, 0]
+      },
+      "properties": {
+        "name": "Banco 24h",
+        "styleUrl": "#icon-971-nodesc",
+        "styleHash": "f6b8232",
+        "styleMapHash": {
+          "normal": "#icon-971-nodesc-normal",
+          "highlight": "#icon-971-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.950086, -8.0172365, 0]
+      },
+      "properties": {
+        "name": "Brasil",
+        "styleUrl": "#icon-971-nodesc",
+        "styleHash": "f6b8232",
+        "styleMapHash": {
+          "normal": "#icon-971-nodesc-normal",
+          "highlight": "#icon-971-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9512635, -8.0140613, 0]
+      },
+      "properties": {
+        "name": "Quadra DCE",
+        "styleUrl": "#icon-503-DB4436",
+        "styleHash": "-716a1277",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-normal",
+          "highlight": "#icon-503-DB4436-highlight"
+        },
+        "description": "Famosas calouradas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9509135, -8.0171555, 0]
+      },
+      "properties": {
+        "name": "SINTUFEPE",
+        "styleUrl": "#icon-1037",
+        "styleHash": "-23b52b9a",
+        "styleMapHash": {
+          "normal": "#icon-1037-normal",
+          "highlight": "#icon-1037-highlight"
+        },
+        "description": "Sindicato dos Trabalhadores das Universidades Federais de Pernambuco"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.945356, -8.0178992, 0]
+      },
+      "properties": {
+        "name": "APUFRPE",
+        "styleUrl": "#icon-1037",
+        "styleHash": "-23b52b9a",
+        "styleMapHash": {
+          "normal": "#icon-1037-normal",
+          "highlight": "#icon-1037-highlight"
+        },
+        "description": "Antigo Mesa Farta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9495885, -8.0177027, 0]
+      },
+      "properties": {
+        "name": "Praça do CEGOE",
+        "styleUrl": "#icon-503-DB4436-nodesc",
+        "styleHash": "220200e0",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-nodesc-normal",
+          "highlight": "#icon-503-DB4436-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9493096, -8.0184716, 0]
+      },
+      "properties": {
+        "name": "Bosque",
+        "styleUrl": "#icon-1379-nodesc",
+        "styleHash": "-7ccb85a",
+        "styleMapHash": {
+          "normal": "#icon-1379-nodesc-normal",
+          "highlight": "#icon-1379-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9507955, -8.015206, 0]
+      },
+      "properties": {
+        "name": "Xerox",
+        "styleUrl": "#icon-503-DB4436",
+        "styleHash": "-716a1277",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-normal",
+          "highlight": "#icon-503-DB4436-highlight"
+        },
+        "description": "Prédio Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9510932, -8.015477, 0]
+      },
+      "properties": {
+        "name": "Ead da UFRPE\n",
+        "styleUrl": "#icon-1197-nodesc",
+        "styleHash": "-bc9d789",
+        "styleMapHash": {
+          "normal": "#icon-1197-nodesc-normal",
+          "highlight": "#icon-1197-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.950612, -8.014408, 0]
+      },
+      "properties": {
+        "name": "UFRPE - Universidade Federal Rural de Pernambuco",
+        "styleUrl": "#icon-503-DB4436",
+        "styleHash": "-716a1277",
+        "styleMapHash": {
+          "normal": "#icon-503-DB4436-normal",
+          "highlight": "#icon-503-DB4436-highlight"
+        },
+        "description":
+          "<img src=\"https://lh6.googleusercontent.com/proxy/7-zurlZLRTnxeLLrIFhpvCB34-HnTXNm-OACyXHVKQINE-3QijjBHtNXbDJr8UTUT3ggPJF7Cobdn5fFyOx4CQg6kc1IjH8QfqWih1qaALOuzAM53KvhdFnA9sHhnao\" height=\"200\" width=\"auto\" /><br><br>",
+        "gx_media_links":
+          "https://lh6.googleusercontent.com/proxy/7-zurlZLRTnxeLLrIFhpvCB34-HnTXNm-OACyXHVKQINE-3QijjBHtNXbDJr8UTUT3ggPJF7Cobdn5fFyOx4CQg6kc1IjH8QfqWih1qaALOuzAM53KvhdFnA9sHhnao"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.945363, -8.015957, 0]
+      },
+      "properties": {
+        "name": "Bar da Curva",
+        "styleUrl": "#icon-1085-nodesc",
+        "styleHash": "-6ca8f410",
+        "styleMapHash": {
+          "normal": "#icon-1085-nodesc-normal",
+          "highlight": "#icon-1085-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.951119, -8.014041, 0]
+      },
+      "properties": {
+        "name": "Restaurante Universitário UFRPE",
+        "styleUrl": "#icon-1085-nodesc",
+        "styleHash": "-6ca8f410",
+        "styleMapHash": {
+          "normal": "#icon-1085-nodesc-normal",
+          "highlight": "#icon-1085-nodesc-highlight"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.9452581, -8.0176814, 0]
+      },
+      "properties": {
+        "name": "Espaço Vivência",
+        "styleUrl": "#icon-1085",
+        "styleHash": "-376f96f1",
+        "styleMapHash": {
+          "normal": "#icon-1085-normal",
+          "highlight": "#icon-1085-highlight"
+        },
+        "description": "Agronomia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-34.951458, -8.0143057, 0]
+      },
+      "properties": {
+        "name": "Lanchonete DCE",
+        "styleUrl": "#icon-1085-nodesc",
+        "styleHash": "-6ca8f410",
+        "styleMapHash": {
+          "normal": "#icon-1085-nodesc-normal",
+          "highlight": "#icon-1085-nodesc-highlight"
+        }
+      }
+    }
+  ]
+}

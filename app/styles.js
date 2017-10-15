@@ -137,5 +137,13 @@ export default {
     margin: 16,
     fontSize: 18,
     color: COLORS.blue
+  },
+  agendaItem: {
+    backgroundColor: 'white',
+    flex: 1,
+    borderRadius: 5,
+    padding: 10,
+    marginRight: 10,
+    marginTop: 17
   }
 };

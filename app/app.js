@@ -14,6 +14,11 @@ import Restaurant from './pages/restaurant';
 import Course from './pages/course';
 import Module from './pages/module';
 
+import Exercices from './pages/exercices';
+import Schedule from './pages/schedule';
+import Messages from './pages/messages';
+import Map from './pages/map';
+
 const Monday = props => <Restaurant navigation={props.navigation} dayOfWeek="segunda" />;
 const Tuesday = props => <Restaurant navigation={props.navigation} dayOfWeek="terca" />;
 const Wednesday = props => <Restaurant navigation={props.navigation} dayOfWeek="quarta" />;
@@ -76,29 +81,29 @@ const HomeTab = TabNavigator(
         tabBarIcon: ({ tintColor }) => <Icon name="home" size={20} color={tintColor} />
       }
     },
-    Calendar: {
-      screen: Home,
+    Exercices: {
+      screen: Exercices,
       navigationOptions: {
         tabBarLabel: 'Exercícios',
         tabBarIcon: ({ tintColor }) => <Icon name="today" size={20} color={tintColor} />
       }
     },
     Schedule: {
-      screen: Home,
+      screen: Schedule,
       navigationOptions: {
         tabBarLabel: 'Horário',
         tabBarIcon: ({ tintColor }) => <Icon name="view-week" size={20} color={tintColor} />
       }
     },
     Messages: {
-      screen: Home,
+      screen: Messages,
       navigationOptions: {
         tabBarLabel: 'Mensagens',
         tabBarIcon: ({ tintColor }) => <Icon name="chat" size={20} color={tintColor} />
       }
     },
     UFRPE: {
-      screen: Home,
+      screen: Map,
       navigationOptions: {
         tabBarLabel: 'UFRPE',
         tabBarIcon: ({ tintColor }) => <Icon name="school" size={20} color={tintColor} />
