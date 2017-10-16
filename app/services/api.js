@@ -116,6 +116,20 @@ const getMessages = (userIdTo, userIdFrom) => {
   }).then(response => response.json());
 };
 
+const getAssignments = courseId => {
+  const formData = new FormData();
+
+  formData.append('courseids[]', courseId);
+  formData.append('wsfunction', CONSTS.FUNCTION_GET_ASSIGNMENTS);
+  formData.append('wstoken', global.USER.token);
+
+  return fetch(AVA_URL + CONSTS.URL_COMPLEMENT, {
+    method: 'POST',
+    body: formData,
+    headers
+  }).then(response => response.json());
+};
+
 export {
   login,
   getSiteInfo,
@@ -126,5 +140,6 @@ export {
   getCalendar,
   getCourseContent,
   getCalendarEvents,
-  getMessages
+  getMessages,
+  getAssignments
 };

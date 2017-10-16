@@ -48,7 +48,8 @@ export default {
   },
   darkButtonText: {
     fontSize: 16,
-    color: '#FFF'
+    color: '#FFF',
+    textAlign: 'center'
   },
   blue: {
     paddingTop: 16,

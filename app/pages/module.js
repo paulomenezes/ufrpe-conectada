@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity, AsyncStorage, ScrollView, Dimensions } from 'react-native';
+import {
+  Text,
+  View,
+  TouchableOpacity,
+  AsyncStorage,
+  ScrollView,
+  Dimensions,
+  Linking
+} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import HTMLView from 'react-native-htmlview';
 
@@ -31,6 +39,8 @@ export default class Module extends Component {
       content: props.navigation.state.params.module
     };
 
+    console.log(this.state);
+
     this.data = this.state.content.summary.replace(/\n/gi, '');
   }
 
@@ -41,13 +51,30 @@ export default class Module extends Component {
   }
 
   getImage(module) {
-    if (module.contents) {
+    if (module.contents && module.contents.length > 0) {
       const name = module.contents[0].filename.split('.');
       const extension = name[name.length - 1];
 
       return MIME_TYPES[extension] ? MIME_TYPES[extension] : 'file-o';
     } else {
       return MIME_TYPES[module.modname] ? MIME_TYPES[module.modname] : 'file';
+    }
+  }
+
+  onPress(content) {
+    switch (content.modname) {
+      case 'assign':
+        this.props.navigation.navigate('Assignment', {
+          course: this.state.course,
+          content: content
+        });
+        break;
+      case 'url':
+      case 'resource':
+        if (content.contents && content.contents[0]) {
+          Linking.openURL(`${content.contents[0].fileurl}&token=${global.USER.token}`);
+        }
+        break;
     }
   }
 
@@ -70,6 +97,7 @@ export default class Module extends Component {
                 title={content.name}
                 description={content.modplural}
                 image={this.getImage(content)}
+                onPress={this.onPress.bind(this, content)}
               />
             ))}
           </View>

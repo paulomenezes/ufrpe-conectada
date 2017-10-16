@@ -13,12 +13,14 @@ export default class Schedule extends Component {
 
     this.state = {
       loading: true,
-      timetable: {}
+      timetable: {},
+      withoutHours: []
     };
   }
 
   async componentDidMount() {
     const timetable = {};
+    const withoutHours = [];
     global.USER.courses.forEach(course => {
       if (course.classes.schedules) {
         course.classes.schedules.forEach(schedule => {
@@ -31,6 +33,8 @@ export default class Schedule extends Component {
             course
           });
         });
+      } else {
+        withoutHours.push(course);
       }
     });
 
@@ -39,7 +43,8 @@ export default class Schedule extends Component {
     });
 
     this.setState({
-      timetable
+      timetable,
+      withoutHours
     });
   }
 
@@ -52,6 +57,19 @@ export default class Schedule extends Component {
   render() {
     return (
       <ScrollView style={[styles.container]}>
+        <Text style={styles.pageTitle}>Componentes sem horário</Text>
+        {this.state.withoutHours.map((course, index) => (
+          <TouchableOpacity
+            key={index}
+            style={[styles.courseList, { borderLeftColor: course.color }]}
+            onPress={this.goToday.bind(this, course)}
+          >
+            <Text style={styles.courseListTitle}>{course.classes.name}</Text>
+            <Text style={styles.courseListPlace}>
+              {course.classes.place ? course.classes.place : course.classes.departament}
+            </Text>
+          </TouchableOpacity>
+        ))}
         {Object.keys(this.state.timetable).map((key, i) => (
           <View key={i}>
             <Text style={styles.pageTitle}>

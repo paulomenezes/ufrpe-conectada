@@ -13,6 +13,7 @@ import Login from './pages/login';
 import Restaurant from './pages/restaurant';
 import Course from './pages/course';
 import Module from './pages/module';
+import Assignment from './pages/assignment';
 
 import Exercices from './pages/exercices';
 import Schedule from './pages/schedule';
@@ -130,7 +131,8 @@ const UFRPE = StackNavigator(
     Login: { screen: Login, navigationOptions: { title: 'UFRPE Conectada' } },
     Restaurant: { screen: RestaurantTab, navigationOptions: { title: 'Cardápio' } },
     Course: { screen: Course },
-    Module: { screen: Module }
+    Module: { screen: Module },
+    Assignment: { screen: Assignment }
   },
   {
     cardStyle: styles.container,

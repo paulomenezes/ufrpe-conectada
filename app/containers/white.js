@@ -1,12 +1,16 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import styles from '../styles';
 import { COLORS } from '../contants';
 
 const White = props => (
-  <View style={[styles.white, props.style]}>
+  <TouchableOpacity
+    style={[styles.white, props.style]}
+    disabled={!props.onPress}
+    onPress={props.onPress}
+  >
     <View>
       {props.image && (
         <Icon style={styles.whiteIcon} size={32} name={props.image} color={COLORS.blue} />
@@ -16,7 +20,7 @@ const White = props => (
       <Text style={styles.whiteTitle}>{props.title}</Text>
       <Text style={styles.whiteDescription}>{props.description}</Text>
     </View>
-  </View>
+  </TouchableOpacity>
 );
 
 export default White;

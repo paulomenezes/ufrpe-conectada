@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Calendar, CalendarList, Agenda, LocaleConfig } from 'react-native-calendars';
 
 import { getCalendarEvents } from '../services/api';
@@ -29,7 +29,7 @@ export default class Exercices extends Component {
   async componentDidMount() {
     try {
       const start = new Date(new Date().getFullYear(), 0, 1);
-      const end = new Date(new Date().getFullYear() + 1, 0, 1);
+      const end = new Date(new Date().getFullYear() + 2, 0, 1);
 
       const courseIds = [];
       global.USER.courses.forEach(course => {
@@ -54,12 +54,11 @@ export default class Exercices extends Component {
 
           calendarEvents[date].push({
             text: event.name,
+            event: event,
             course: global.USER.courses.filter(c => c.id === event.courseid)[0]
           });
         });
 
-        console.log(events);
-        console.log(calendarEvents);
         this.setState({
           events: calendarEvents
         });
@@ -69,14 +68,25 @@ export default class Exercices extends Component {
     }
   }
 
+  open(item) {
+    console.log(item);
+    this.props.navigation.navigate('Assignment', {
+      course: item.course,
+      content: item.event
+    });
+  }
+
   renderItem(item) {
     return (
-      <View style={[styles.agendaItem, { height: item.height }]}>
+      <TouchableOpacity
+        style={[styles.agendaItem, { height: item.height }]}
+        onPress={this.open.bind(this, item)}
+      >
         <Text style={{ fontWeight: 'bold', color: item.course.color }}>{item.text}</Text>
         <Text style={{ marginTop: 5, color: 'black' }}>
           {getCamelSentence(item.course.classes.name, true)}
         </Text>
-      </View>
+      </TouchableOpacity>
     );
   }
 

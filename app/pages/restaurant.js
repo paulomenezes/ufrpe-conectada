@@ -10,7 +10,7 @@ import styles from '../styles';
 import Blue from '../containers/blue';
 import White from '../containers/white';
 
-import { weekDays, meals } from '../contants';
+import { weekDays, meals, COLORS } from '../contants';
 
 export default class Restaurant extends Component {
   constructor(props) {
@@ -46,50 +46,50 @@ export default class Restaurant extends Component {
 
   render() {
     return (
-      <View>
-        <Blue title="Almoço" description={this.state.description}>
-          <ScrollView horizontal>
-            {Object.keys(meals).map(
-              (key, index) =>
-                this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][key] && (
-                  <View style={styles.white} key={index}>
-                    <Text style={styles.whiteTitle}>
-                      {this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][
-                        key
-                      ][0].substr(
-                        this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][
-                          key
-                        ][0].indexOf(':') + 2
-                      )}
-                    </Text>
-                    <Text style={styles.whiteDescription}>{meals[key]}</Text>
-                  </View>
-                )
-            )}
-          </ScrollView>
-        </Blue>
-        <Blue title="Jantar" description={this.state.description}>
-          <ScrollView horizontal>
-            {Object.keys(meals).map(
-              (key, index) =>
-                this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][key] && (
-                  <View style={styles.white} key={index}>
-                    <Text style={styles.whiteTitle}>
-                      {this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
-                        key
-                      ][0].substr(
-                        this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
-                          key
-                        ][0].indexOf(':') + 2
-                      )}
-                    </Text>
-                    <Text style={styles.whiteDescription}>{meals[key]}</Text>
-                  </View>
-                )
-            )}
-          </ScrollView>
-        </Blue>
-      </View>
+      <ScrollView style={styles.page}>
+        <View style={[styles.courseList, { borderLeftColor: COLORS.pink }]}>
+          <Text style={styles.courseListTime}>{this.state.description}</Text>
+          <Text style={styles.courseListTitle}>Almoço</Text>
+          {Object.keys(meals).map(
+            (key, index) =>
+              this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][key] && (
+                <White
+                  key={index}
+                  style={{ marginLeft: 0, marginBottom: 8 }}
+                  title={this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][
+                    key
+                  ][0].substr(
+                    this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][
+                      key
+                    ][0].indexOf(':') + 2
+                  )}
+                  description={meals[key]}
+                />
+              )
+          )}
+        </View>
+        <View style={[styles.courseList, { borderLeftColor: COLORS.pink }]}>
+          <Text style={styles.courseListTime}>{this.state.description}</Text>
+          <Text style={styles.courseListTitle}>Jantar</Text>
+          {Object.keys(meals).map(
+            (key, index) =>
+              this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][key] && (
+                <White
+                  key={index}
+                  style={{ marginLeft: 0, marginBottom: 8 }}
+                  title={this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
+                    key
+                  ][0].substr(
+                    this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
+                      key
+                    ][0].indexOf(':') + 2
+                  )}
+                  description={meals[key]}
+                />
+              )
+          )}
+        </View>
+      </ScrollView>
     );
   }
 }

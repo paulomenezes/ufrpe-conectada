@@ -49,6 +49,11 @@ export default class Home extends Component {
         }
       });
 
+      todayCourses = todayCourses.sort(
+        (a, b) =>
+          a.classes.schedules[dayOfWeek].timeStart > b.classes.schedules[dayOfWeek].timeStart
+      );
+
       this.setState({
         user: global.USER,
         today: todayCourses,

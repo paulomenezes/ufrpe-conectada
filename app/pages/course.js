@@ -6,7 +6,8 @@ import {
   AsyncStorage,
   ScrollView,
   ActivityIndicator,
-  FlatList
+  FlatList,
+  Linking
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -105,6 +106,7 @@ export default class Course extends Component {
                 title={module.name}
                 description={module.modplural}
                 image={this.getImage(module)}
+                onPress={this.onPress.bind(this, module)}
               />
             ))}
           </ScrollView>
@@ -117,23 +119,45 @@ export default class Course extends Component {
     );
   }
 
+  onPress(content) {
+    switch (content.modname) {
+      case 'assign':
+        this.props.navigation.navigate('Assignment', {
+          course: this.state.course,
+          content: content
+        });
+        break;
+      case 'url':
+      case 'resource':
+        if (content.contents && content.contents[0]) {
+          Linking.openURL(`${content.contents[0].fileurl}&token=${global.USER.token}`);
+        }
+        break;
+    }
+  }
+
   render() {
     return (
       <View style={styles.page}>
         <View style={[styles.courseList, { borderLeftColor: this.state.course.color }]}>
-          {this.state.course.classes.schedules
-            .sort((a, b) => a.dayOfWeek > b.dayOfWeek)
-            .map((schedule, index) => (
-              <Text key={index} style={styles.courseListTime}>
-                {weekDaysShort[schedule.dayOfWeek] +
-                  ': ' +
-                  schedule.timeStart +
-                  ' - ' +
-                  schedule.timeEnd}
-              </Text>
-            ))}
+          {this.state.course.classes.schedules &&
+            this.state.course.classes.schedules
+              .sort((a, b) => a.dayOfWeek > b.dayOfWeek)
+              .map((schedule, index) => (
+                <Text key={index} style={styles.courseListTime}>
+                  {weekDaysShort[schedule.dayOfWeek] +
+                    ': ' +
+                    schedule.timeStart +
+                    ' - ' +
+                    schedule.timeEnd}
+                </Text>
+              ))}
           <Text style={styles.courseListTitle}>{this.state.course.classes.name}</Text>
-          <Text style={styles.courseListPlace}>{this.state.course.classes.place}</Text>
+          <Text style={styles.courseListPlace}>
+            {this.state.course.classes.place
+              ? this.state.course.classes.place
+              : this.state.course.classes.departament}
+          </Text>
         </View>
 
         <ScrollView>
