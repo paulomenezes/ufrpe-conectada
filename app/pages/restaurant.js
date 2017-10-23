@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  ActivityIndicator,
+  Dimensions
+} from 'react-native';
 
 import iconv from 'iconv-lite';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -11,6 +18,8 @@ import Blue from '../containers/blue';
 import White from '../containers/white';
 
 import { weekDays, meals, COLORS } from '../contants';
+
+const { width, height } = Dimensions.get('window');
 
 export default class Restaurant extends Component {
   constructor(props) {
@@ -45,6 +54,8 @@ export default class Restaurant extends Component {
   }
 
   render() {
+    const wh = width - 40;
+
     return (
       <ScrollView style={styles.page}>
         <View style={[styles.courseList, { borderLeftColor: COLORS.pink }]}>
@@ -55,7 +66,7 @@ export default class Restaurant extends Component {
               this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][key] && (
                 <White
                   key={index}
-                  style={{ marginLeft: 0, marginBottom: 8 }}
+                  style={{ marginLeft: 0, marginBottom: 8, width: wh }}
                   title={this.state.restaurant[this.state.dayOfWeekString][0]['almoco'][0][
                     key
                   ][0].substr(
@@ -76,7 +87,7 @@ export default class Restaurant extends Component {
               this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][key] && (
                 <White
                   key={index}
-                  style={{ marginLeft: 0, marginBottom: 8 }}
+                  style={{ marginLeft: 0, marginBottom: 8, width: wh }}
                   title={this.state.restaurant[this.state.dayOfWeekString][0]['jantar'][0][
                     key
                   ][0].substr(

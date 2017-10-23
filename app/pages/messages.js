@@ -47,6 +47,8 @@ export default class Messages extends Component {
               console.log(error);
             }
           }
+
+          this.forceUpdate();
         });
       }
     } catch (error) {
@@ -54,10 +56,13 @@ export default class Messages extends Component {
     }
   }
 
+  goMessage(item) {
+    this.props.navigation.navigate('Message', item);
+  }
+
   _keyExtractor = (item, index) => item.id;
 
   renderItem({ item }) {
-    console.log(item);
     const date = new Date(item.timecreated * 1000);
 
     return (
@@ -68,6 +73,7 @@ export default class Messages extends Component {
           borderBottomWidth: 1,
           borderBottomColor: '#EEE'
         }}
+        onPress={this.goMessage.bind(this, item)}
       >
         <View style={{ flexDirection: 'row' }}>
           <Image

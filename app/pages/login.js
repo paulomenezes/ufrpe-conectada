@@ -100,7 +100,10 @@ export default class Login extends Component {
           index: 0,
           actions: [NavigationActions.navigate({ routeName: 'Home' })]
         });
+
         this.props.navigation.dispatch(resetAction);
+
+        this.forceUpdate();
       } else {
         Alert.alert('Login', 'O usuário e senha são obrigatórios');
       }

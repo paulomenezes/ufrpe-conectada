@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity, AsyncStorage } from 'react-native';
+import { Text, View, TouchableOpacity, AsyncStorage, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { NavigationActions } from 'react-navigation';
 
@@ -71,10 +71,20 @@ export default class Home extends Component {
     });
   }
 
+  async logout() {
+    await AsyncStorage.removeItem('user');
+
+    const resetAction = NavigationActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({ routeName: 'Welcome' })]
+    });
+    this.props.navigation.dispatch(resetAction);
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <View>
+        <ScrollView>
           <View>
             <Text style={styles.pageTitle}>
               {weekDays[this.state.date.getDay()] +
@@ -100,7 +110,14 @@ export default class Home extends Component {
             ))}
           </View>
           <Restaurant navigation={this.props.navigation} />
-        </View>
+
+          <TouchableOpacity
+            style={[styles.darkButton, { margin: 16 }]}
+            onPress={this.logout.bind(this)}
+          >
+            <Text style={styles.darkButtonText}>Sair</Text>
+          </TouchableOpacity>
+        </ScrollView>
       </View>
     );
   }

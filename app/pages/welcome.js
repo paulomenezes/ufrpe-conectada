@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, AsyncStorage } from 'react-native';
+import { View, AsyncStorage, TouchableOpacity } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
 import styles from '../styles';

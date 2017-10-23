@@ -18,6 +18,7 @@ import Assignment from './pages/assignment';
 import Exercices from './pages/exercices';
 import Schedule from './pages/schedule';
 import Messages from './pages/messages';
+import Message from './pages/message';
 import Map from './pages/map';
 
 const Monday = props => <Restaurant navigation={props.navigation} dayOfWeek="segunda" />;
@@ -132,7 +133,8 @@ const UFRPE = StackNavigator(
     Restaurant: { screen: RestaurantTab, navigationOptions: { title: 'Cardápio' } },
     Course: { screen: Course },
     Module: { screen: Module },
-    Assignment: { screen: Assignment }
+    Assignment: { screen: Assignment },
+    Message: { screen: Message }
   },
   {
     cardStyle: styles.container,
