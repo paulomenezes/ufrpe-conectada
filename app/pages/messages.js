@@ -76,10 +76,14 @@ export default class Messages extends Component {
         onPress={this.goMessage.bind(this, item)}
       >
         <View style={{ flexDirection: 'row' }}>
-          <Image
-            style={{ width: 50, height: 50, borderRadius: 25, marginRight: 8 }}
-            source={{ uri: item.user.profileimageurl }}
-          />
+          {item &&
+            item.user &&
+            item.user.profileimageurl && (
+              <Image
+                style={{ width: 50, height: 50, borderRadius: 25, marginRight: 8 }}
+                source={{ uri: item.user.profileimageurl }}
+              />
+            )}
           <View style={{ flex: 1 }}>
             <Text style={{ fontWeight: 'bold' }}>{item.userfromfullname}</Text>
             <Text numberOfLines={2} style={{ color: '#AAA' }}>

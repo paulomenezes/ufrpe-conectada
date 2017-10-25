@@ -21,7 +21,6 @@ export default class Home extends Component {
     this.state = {
       user: undefined,
       today: [],
-      dayOfWeek: 0,
       date: new Date()
     };
   }
@@ -33,15 +32,14 @@ export default class Home extends Component {
         today = 1;
       }
 
-      let dayOfWeek = 0;
-
       const todayCourses = [];
+      const indexSchedules = [];
       global.USER.courses.forEach(course => {
         if (course.classes.schedules) {
           for (var i = 0; i < course.classes.schedules.length; i++) {
             var schedule = course.classes.schedules[i];
             if (schedule.dayOfWeek === today) {
-              dayOfWeek = i;
+              course.schedule = schedule;
               todayCourses.push(course);
               break;
             }
@@ -49,15 +47,11 @@ export default class Home extends Component {
         }
       });
 
-      todayCourses = todayCourses.sort(
-        (a, b) =>
-          a.classes.schedules[dayOfWeek].timeStart > b.classes.schedules[dayOfWeek].timeStart
-      );
+      todayCourses = todayCourses.sort((a, b) => a.schedule.timeStart > b.schedule.timeStart);
 
       this.setState({
         user: global.USER,
-        today: todayCourses,
-        dayOfWeek
+        today: todayCourses
       });
     } catch (error) {
       console.log(error);
@@ -66,8 +60,7 @@ export default class Home extends Component {
 
   goToday(course) {
     this.props.navigation.navigate('Course', {
-      course: course,
-      dayOfWeek: this.state.dayOfWeek
+      course: course
     });
   }
 
@@ -100,9 +93,7 @@ export default class Home extends Component {
                 onPress={this.goToday.bind(this, today)}
               >
                 <Text style={styles.courseListTime}>
-                  {today.classes.schedules[this.state.dayOfWeek].timeStart +
-                    ' - ' +
-                    today.classes.schedules[this.state.dayOfWeek].timeEnd}
+                  {today.schedule.timeStart + ' - ' + today.schedule.timeEnd}
                 </Text>
                 <Text style={styles.courseListTitle}>{today.classes.name}</Text>
                 <Text style={styles.courseListPlace}>{today.classes.place}</Text>

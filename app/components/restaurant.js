@@ -26,8 +26,10 @@ export default class Restaurant extends Component {
       dayOfWeek = 5;
     }
 
-    const dayOfWeekString = weekDays[dayOfWeek].toLowerCase();
+    let dayOfWeekString = weekDays[dayOfWeek].toLowerCase();
     const meal = date.getHours() < 15 ? 'almoco' : 'jantar';
+
+    dayOfWeekString = dayOfWeekString.replace('ç', 'c');
 
     this.state = {
       loading: true,

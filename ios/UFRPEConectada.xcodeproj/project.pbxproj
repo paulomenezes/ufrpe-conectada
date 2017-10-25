@@ -39,6 +39,7 @@
 		4E17107138C64B4495F638BA /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A541E84EFA4D4202AA2B3C7C /* MaterialCommunityIcons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6AE46079B99C49F780463ABB /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5433DDF259947BB9881F351 /* libRNVectorIcons.a */; };
+		7524B9661FA011AC00CE1AAE /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7524B9651FA011AC00CE1AAE /* iTunesArtwork@1x.png */; };
 		813F8804E3A346AEA16E0996 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB211C6C484059B9CEFD8F /* EvilIcons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		86AC89E3F0D941CBBE8A5875 /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1322B52E5B444D999141AC4A /* libAirMaps.a */; };
@@ -328,6 +329,7 @@
 		52A967F3C57E4822991B1FFD /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6DBB211C6C484059B9CEFD8F /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		7524B9651FA011AC00CE1AAE /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7FD97ADDF6974994B52F4387 /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 		13B07FAE1A68108700A75B9A /* UFRPEConectada */ = {
 			isa = PBXGroup;
 			children = (
+				7524B9651FA011AC00CE1AAE /* iTunesArtwork@1x.png */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1074,6 +1077,7 @@
 				D610548F863D4E99B12C5254 /* Octicons.ttf in Resources */,
 				3A5BCA590268451E8146FCF8 /* SimpleLineIcons.ttf in Resources */,
 				EE80E834047F40229F4157F9 /* Zocial.ttf in Resources */,
+				7524B9661FA011AC00CE1AAE /* iTunesArtwork@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
