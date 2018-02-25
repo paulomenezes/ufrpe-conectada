@@ -46,6 +46,12 @@ export default {
     paddingHorizontal: 32,
     paddingVertical: 8
   },
+  darkButton2: {
+    backgroundColor: '#f21e60',
+    borderRadius: 8,
+    padding: 8,
+    marginHorizontal: 4
+  },
   darkButtonText: {
     fontSize: 16,
     color: '#FFF',
@@ -146,5 +152,30 @@ export default {
     padding: 10,
     marginRight: 10,
     marginTop: 17
+  },
+  news: {
+    marginLeft: 15,
+    flexDirection: 'row',
+    backgroundColor: '#EEE',
+    padding: 5,
+    borderRadius: 5
+  },
+  newsImage: {
+    width: 100,
+    height: 75
+  },
+  newsData: {
+    flex: 1,
+    width: 200,
+    marginLeft: 10
+  },
+  newsTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    height: 60
+  },
+  newsDate: {
+    fontSize: 12,
+    color: 'gray'
   }
 };

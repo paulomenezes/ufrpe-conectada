@@ -41,6 +41,7 @@ export const meals = {
 };
 
 export const AVA_URL = 'http://ava.ufrpe.br';
+export const PORAQUI_URL = 'https://poraqui.news/api/v2/posts/search?';
 export const FIREBASE_URL = 'https://ufrpe-5033f.firebaseio.com/';
 export const CONSTS = {
   URL_COMPLEMENT: '/webservice/rest/server.php?moodlewsrestformat=json',

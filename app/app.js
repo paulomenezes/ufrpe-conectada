@@ -21,6 +21,9 @@ import Messages from './pages/messages';
 import Message from './pages/message';
 import Map from './pages/map';
 
+import NewsList from './pages/newsList';
+import NewsPage from './pages/newsPage';
+
 const Monday = props => <Restaurant navigation={props.navigation} dayOfWeek="segunda" />;
 const Tuesday = props => <Restaurant navigation={props.navigation} dayOfWeek="terca" />;
 const Wednesday = props => <Restaurant navigation={props.navigation} dayOfWeek="quarta" />;
@@ -104,10 +107,10 @@ const HomeTab = TabNavigator(
         tabBarIcon: ({ tintColor }) => <Icon name="chat" size={20} color={tintColor} />
       }
     },
-    UFRPE: {
-      screen: Map,
+    News: {
+      screen: NewsList,
       navigationOptions: {
-        tabBarLabel: 'UFRPE',
+        tabBarLabel: 'Notícias',
         tabBarIcon: ({ tintColor }) => <Icon name="school" size={20} color={tintColor} />
       }
     }
@@ -134,7 +137,8 @@ const UFRPE = StackNavigator(
     Course: { screen: Course },
     Module: { screen: Module },
     Assignment: { screen: Assignment },
-    Message: { screen: Message }
+    Message: { screen: Message },
+    NewsPage: { screen: NewsPage }
   },
   {
     cardStyle: styles.container,

@@ -7,6 +7,7 @@ import styles from '../styles';
 
 import Welcome from '../components/welcome';
 import Restaurant from '../components/restaurant';
+import News from '../components/news';
 
 import Yellow from '../containers/yellow';
 import Pink from '../containers/pink';
@@ -101,6 +102,7 @@ export default class Home extends Component {
             ))}
           </View>
           <Restaurant navigation={this.props.navigation} />
+          <News navigation={this.props.navigation} />
 
           <TouchableOpacity
             style={[styles.darkButton, { margin: 16 }]}
